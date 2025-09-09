@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Get a Landscaping Quote - Seaside Landscaping</title>
+    <meta name="description" content="Contact Seaside Landscaping for a fast quote on excavation, retaining walls, rock work, or turfing services on the Mornington Peninsula. Submit your project details today.">
+    <link rel="canonical" href="https://seasidelandscaping.com.au/contact.html">
+
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Seaside Landscaping",
+      "image": "https://seasidelandscaping.com.au/assets/images/logo.svg",
+      "url": "https://seasidelandscaping.com.au",
+      "telephone": "+61-3-1234-5678",
+      "email": "info@seasidelandscaping.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mornington Peninsula",
+        "addressLocality": "Mornington",
+        "addressRegion": "VIC",
+        "postalCode": "3931",
+        "addressCountry": "AU"
+      },
+      "areaServed": [
+        { "@type": "State", "name": "Victoria" },
+        "Mornington", "Mount Martha", "Mount Eliza", "Frankston", "Dromana", "Rosebud", "Rye", "Sorrento", "Portsea", "Red Hill", "Flinders", "Safety Beach", "Capel Sound", "McCrae"
+      ],
+      "serviceType": [
+        "Excavation", "Retaining Walls", "Rock Walls", "Turfing", "Landscaping"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+61-3-1234-5678",
+        "contactType": "customer service",
+        "email": "info@seasidelandscaping.com.au"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero-subpage" role="region" aria-label="Contact Us for a Quote">
+            <div class="container text-center">
+                <h1 class="heading-serif text-shadow">Get a Fast Quote</h1>
+                <p class="section-sub-intro text-shadow">Tell us about your project, and we'll get back to you promptly.</p>
+            </div>
+        </section>
+
+        <section class="section-padded section-canvas-bg fade-in" aria-labelledby="contact-form-heading">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2 id="contact-form-heading" class="heading-serif">Let's Discuss Your Project</h2>
+                    <p>Whether you need a full site excavation, a durable retaining wall, a stunning rock feature, or a lush new lawn, we're here to help.</p>
+                    <p>Fill out the form below with as much detail as possible. The more information you provide, the better we can understand your needs and prepare an accurate quote.</p>
+                    <ul class="contact-details-list">
+                        <li><strong>Phone:</strong> <a href="tel:+61312345678">03 1234 5678</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:info@seasidelandscaping.com.au">info@seasidelandscaping.com.au</a></li>
+                        <li><strong>Service Area:</strong> Mornington Peninsula, VIC</li>
+                    </ul>
+                    <p class="small-text">Prefer to chat first? Give us a call or send an email.</p>
+                </div>
+                <div class="contact-form-wrapper card">
+                    <form id="contactForm" action="https://formspree.io/f/{your_formspree_id}" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="suburb">Your Suburb <span class="required">*</span></label>
+                            <input type="text" id="suburb" name="suburb" required autocomplete="address-level2">
+                        </div>
+                        <div class="form-group">
+                            <label for="service-type">Type of Service Interested In <span class="required">*</span></label>
+                            <select id="service-type" name="service-type[]" multiple required aria-describedby="service-type-help">
+                                <option value="" disabled>Select one or more</option>
+                                <option value="excavation">Excavation & Site Prep</option>
+                                <option value="retaining-walls">Retaining Walls</option>
+                                <option value="rock-walls">Rock Walls</option>
+                                <option value="turfing">Turfing & New Lawns</option>
+                                <option value="other">Other Landscaping</option>
+                            </select>
+                            <small id="service-type-help">Hold Ctrl/Cmd to select multiple options.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget-range">Approximate Budget Range</label>
+                            <select id="budget-range" name="budget-range">
+                                <option value="" selected>Please select...</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k-20k">$10,000 - $20,000</option>
+                                <option value="20k-50k">$20,000 - $50,000</option>
+                                <option value="50k+">$50,000+</option>
+                                <option value="unsure">Unsure / Need advice</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell us about your project <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="photos">Upload Project Photos (Optional)</label>
+                            <input type="file" id="photos" name="photos[]" accept="image/*" multiple>
+                            <small>Max 3 files, up to 5MB each. JPEG, PNG, HEIC.</small>
+                        </div>
+
+                        <div class="form-group honeypot-field">
+                            <label for="website-url">Website URL</label>
+                            <input type="text" id="website-url" name="website-url" tabindex="-1" autocomplete="off">
+                            <input type="hidden" name="_gotcha">
+                        </div>
+                        <input type="hidden" name="time_on_page" id="time-on-page">
+
+                        <button type="submit" class="button button-primary button-large" id="submit-button">Send My Enquiry</button>
+
+                        <div id="form-messages" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>

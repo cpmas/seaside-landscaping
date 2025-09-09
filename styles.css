@@ -1,0 +1,115 @@
+/*
+    Seaside Landscaping - Hand-Coded Styles
+    Author: Your Name/AI Assistant
+    Date: October 2023
+
+    Brand Palette:
+    PRIMARY: #92b8bd (seafoam/teal)
+    ACCENT: #445d48 (deep, earthy green)
+    CANVAS: #fff7eb (warm off-white)
+    Neutrals: charcoal #2b2b2b, light stone #f4efe7
+*/
+
+/* --- 0. Base & Reset --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Colors */
+    --color-primary: #92b8bd;
+    --color-accent: #445d48;
+    --color-canvas: #fff7eb;
+    --color-charcoal: #2b2b2b;
+    --color-light-stone: #f4efe7;
+
+    /* Typography */
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+    --section-padding: 5rem; /* 80px */
+    --container-max-width: 1200px;
+    --border-radius-soft: 12px;
+    --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    background-color: var(--color-canvas);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+img, video, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--color-primary);
+    text-decoration: underline;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--font-sans);
+    border: none;
+    background: none;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans); /* Default to sans */
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-accent);
+}
+
+.heading-serif {
+    font-family: var(--font-serif);
+    font-weight: 600;
+}
+
+h1 { font-size: 2.8rem; } /* 44.8px */
+h2 { font-size: 2.2rem; } /* 35.2px */
+h3 { font-size: 1.8rem; } /* 28.8px */
+h4 { font-size: 1.4rem; } /* 22.4px */
+
+p {
+    margin-bottom: var(--spacing-sm);
+}

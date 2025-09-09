@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Before & After Landscaping Gallery - Seaside Landscaping</title>
+    <meta name="description" content="View our portfolio of completed landscaping projects, including excavation, retaining walls, rock work, and turfing transformations across the Mornington Peninsula.">
+    <link rel="canonical" href="https://seasidelandscaping.com.au/projects.html">
+
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Seaside Landscaping",
+      "image": "https://seasidelandscaping.com.au/assets/images/logo.svg",
+      "url": "https://seasidelandscaping.com.au",
+      "telephone": "+61-3-1234-5678",
+      "email": "info@seasidelandscaping.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mornington Peninsula",
+        "addressLocality": "Mornington",
+        "addressRegion": "VIC",
+        "postalCode": "3931",
+        "addressCountry": "AU"
+      },
+      "areaServed": [
+        { "@type": "State", "name": "Victoria" },
+        "Mornington", "Mount Martha", "Mount Eliza", "Frankston", "Dromana", "Rosebud", "Rye", "Sorrento", "Portsea", "Red Hill", "Flinders", "Safety Beach", "Capel Sound", "McCrae"
+      ],
+      "serviceType": [
+        "Excavation", "Retaining Walls", "Rock Walls", "Turfing", "Landscaping"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero-subpage" role="region" aria-label="Our Project Gallery">
+            <div class="container text-center">
+                <h1 class="heading-serif text-shadow">Our Projects</h1>
+                <p class="section-sub-intro text-shadow">See the transformations we've achieved for clients across the Mornington Peninsula.</p>
+            </div>
+        </section>
+
+        <section class="section-padded section-canvas-bg" aria-labelledby="gallery-heading">
+            <div class="container">
+                <h2 id="gallery-heading" class="text-center heading-serif">Before & After Transformations</h2>
+                <div class="filters fade-in">
+                    <button class="filter-button active" data-filter="all">All Projects</button>
+                    <button class="filter-button" data-filter="retaining">Retaining Walls</button>
+                    <button class="filter-button" data-filter="rock-walls">Rock Walls</button>
+                    <button class="filter-button" data-filter="turfing">Turfing</button>
+                    <button class="filter-button" data-filter="excavation">Excavation</button>
+                </div>
+
+                <div class="project-gallery fade-in" id="project-gallery">
+                    <div class="gallery-item" data-category="retaining" data-project-id="1">
+                        <picture>
+                            <source srcset="assets/images/project-thumb-1.webp" type="image/webp">
+                            <img src="assets/images/project-thumb-1.jpg" alt="Before and after of a retaining wall construction" width="400" height="300" loading="lazy">
+                        </picture>
+                        <div class="gallery-item-overlay">
+                            <h3>Mt Martha Retaining Wall</h3>
+                            <p>Concrete sleepers for a sloped backyard.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="turfing" data-project-id="2">
+                        <picture>
+                            <source srcset="assets/images/project-thumb-2.webp" type="image/webp">
+                            <img src="assets/images/project-thumb-2.jpg" alt="Before and after of a lush new lawn installation" width="400" height="300" loading="lazy">
+                        </picture>
+                        <div class="gallery-item-overlay">
+                            <h3>Dromana New Lawn</h3>
+                            <p>Complete lawn refresh with Sir Walter Buffalo.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="rock-walls" data-project-id="3">
+                        <picture>
+                            <source srcset="assets/images/project-thumb-3.webp" type="image/webp">
+                            <img src="assets/images/project-thumb-3.jpg" alt="Before and after of a natural stone rock wall" width="400" height="300" loading="lazy">
+                        </picture>
+                        <div class="gallery-item-overlay">
+                            <h3>Red Hill Feature Rock Wall</h3>
+                            <p>Dry-stacked local stone garden feature.</p>
+                        </div>
+                    </div>
+                     <div class="gallery-item" data-category="excavation" data-project-id="4">
+                        <picture>
+                            <source srcset="assets/images/project-thumb-4.webp" type="image/webp">
+                            <img src="assets/images/project-thumb-4.jpg" alt="Before and after of a site cut for new driveway" width="400" height="300" loading="lazy">
+                        </picture>
+                        <div class="gallery-item-overlay">
+                            <h3>Frankston Site Prep</h3>
+                            <p>Precision site cut and soil removal.</p>
+                        </div>
+                    </div>
+                     <div class="gallery-item" data-category="retaining" data-project-id="5">
+                        <picture>
+                            <source srcset="assets/images/project-thumb-5.webp" type="image/webp">
+                            <img src="assets/images/project-thumb-5.jpg" alt="Before and after of a timber retaining wall" width="400" height="300" loading="lazy">
+                        </picture>
+                        <div class="gallery-item-overlay">
+                            <h3>Rosebud Timber Wall</h3>
+                            <p>Tiered timber retaining for garden beds.</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close project details">&times;</button>
+                <h3 id="modal-title" class="heading-serif">Project Title</h3>
+                <p class="modal-subtitle"></p>
+                <div class="modal-image-wrapper">
+                    <picture>
+                        <source srcset="assets/images/project-after-1.webp" type="image/webp">
+                        <img src="assets/images/project-after-1.jpg" alt="After image of the project" class="modal-image current-image" loading="eager">
+                    </picture>
+                    <picture>
+                        <source srcset="assets/images/project-before-1.webp" type="image/webp">
+                        <img src="assets/images/project-before-1.jpg" alt="Before image of the project" class="modal-image before-image" loading="eager">
+                    </picture>
+                    <button class="before-after-toggle" aria-label="Toggle before and after images">Before / After</button>
+                </div>
+                <div class="modal-details">
+                    <p><strong>Suburb:</strong> <span class="modal-suburb"></span></p>
+                    <p><strong>Scope:</strong> <span class="modal-scope"></span></p>
+                    <p><strong>Materials:</strong> <span class="modal-materials"></span></p>
+                    <p class="modal-description"></p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-padded section-accent-bg testimonial-strip fade-in" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <h2 id="testimonials-heading" class="visually-hidden">What Our Clients Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial-item">
+                        <p class="quote">"Seaside Landscaping transformed our sloped backyard into a functional, beautiful space. The retaining wall is expertly built and looks fantastic!"</p>
+                        <p class="client-info">&mdash; Sarah L., Mount Martha</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <p class="quote">"Professional, reliable, and the turf they laid is absolutely perfect. Our new lawn is the envy of the street."</p>
+                        <p class="client-info">&mdash; David M., Frankston</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <p class="quote">"The rock wall they built for our garden entrance exceeded all expectations. It adds so much character and feels incredibly solid."</p>
+                        <p class="client-info">&mdash; Emily R., Red Hill</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padded text-center section-canvas-bg fade-in" aria-labelledby="cta-heading-projects">
+            <div class="container container-narrow">
+                <h2 id="cta-heading-projects" class="heading-serif">Inspired by our work?</h2>
+                <p>Let's create something exceptional for your property on the Mornington Peninsula.</p>
+                <a href="contact.html" class="button button-primary button-large">Get a fast quote</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="main.js" defer></script>
+    <script id="project-data" type="application/json">
+    [
+        {
+            "id": 1,
+            "title": "Mt Martha Retaining Wall",
+            "subtitle": "Robust concrete sleeper wall for a sloped property.",
+            "category": "retaining",
+            "suburb": "Mount Martha",
+            "scope": "Site excavation, drainage installation, concrete sleeper retaining wall construction.",
+            "materials": "Concrete sleepers, ag-pipe drainage, crushed rock backfill.",
+            "description": "This project involved excavating a steeply sloped section of a backyard in Mount Martha to create a level, usable area. We constructed a durable concrete sleeper retaining wall with integrated drainage to prevent water accumulation and ensure the long-term stability of the landscape. The clean lines of the concrete sleepers provided a modern and functional solution, enhancing both aesthetics and usability.",
+            "beforeImage": "assets/images/project-before-1.jpg",
+            "afterImage": "assets/images/project-after-1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Dromana New Lawn Installation",
+            "subtitle": "Complete garden refresh with premium turf.",
+            "category": "turfing",
+            "suburb": "Dromana",
+            "scope": "Old lawn removal, soil amendment, laser levelling, Sir Walter Buffalo turf installation.",
+            "materials": "Premium topsoil, organic fertilisers, Sir Walter Buffalo DNA Certified® turf.",
+            "description": "We transformed a tired, patchy lawn in Dromana into a vibrant, lush green space. This included thorough removal of the existing lawn, extensive soil preparation with nutrient-rich amendments, and precision laser levelling to ensure a perfectly smooth finish. We then expertly laid Sir Walter Buffalo DNA Certified® turf, providing the client with a beautiful, durable, and low-maintenance lawn.",
+            "beforeImage": "assets/images/project-before-2.jpg",
+            "afterImage": "assets/images/project-after-2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Red Hill Feature Rock Wall",
+            "subtitle": "Natural stone wall to define garden beds.",
+            "category": "rock-walls",
+            "suburb": "Red Hill",
+            "scope": "Site preparation, local stone selection and dry-stacked rock wall construction.",
+            "materials": "Locally sourced natural stone, geotextile fabric.",
+            "description": "For this Red Hill property, we created a stunning dry-stacked rock wall that serves as both a functional retaining element and a beautiful garden feature. The natural stone was carefully selected to complement the rural aesthetic of the area, and each rock was precisely placed to ensure structural integrity and a timeless, organic look. This wall defines the garden beds beautifully and manages the gentle slope of the property.",
+            "beforeImage": "assets/images/project-before-3.jpg",
+            "afterImage": "assets/images/project-after-3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Frankston Site Preparation",
+            "subtitle": "Precision site cut for a new driveway and pathways.",
+            "category": "excavation",
+            "suburb": "Frankston",
+            "scope": "Excavation, levelling, and soil removal for new concrete driveway and paths.",
+            "materials": "Excavation machinery, laser levels, soil removal services.",
+            "description": "This project in Frankston involved significant excavation and site preparation for the installation of a new concrete driveway and surrounding pathways. Our team meticulously executed the site cut, ensuring accurate levels and proper fall for drainage. All excavated soil was efficiently removed, leaving a clean, prepared site ready for the concreters to begin their work, demonstrating our commitment to precise and timely groundwork.",
+            "beforeImage": "assets/images/project-before-4.jpg",
+            "afterImage": "assets/images/project-after-4.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Rosebud Timber Retaining",
+            "subtitle": "Tiered timber walls for garden landscaping.",
+            "category": "retaining",
+            "suburb": "Rosebud",
+            "scope": "Construction of two-tier treated pine retaining walls for garden beds.",
+            "materials": "Treated pine sleepers, galvanised posts, drainage aggregate.",
+            "description": "In Rosebud, we designed and built a two-tiered treated pine retaining wall system to create distinct and easily maintainable garden beds on a sloping block. The use of timber sleepers provided a warm, natural aesthetic that complemented the existing landscape. Each tier was constructed with proper footings and drainage to ensure stability and longevity, turning a difficult slope into attractive, functional garden spaces.",
+            "beforeImage": "assets/images/project-before-5.jpg",
+            "afterImage": "assets/images/project-after-5.jpg"
+        }
+    ]
+    </script>
+</body>
+</html>
