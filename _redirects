@@ -1,0 +1,5 @@
+# Redirects for Seaside Landscaping
+
+# Redirect old, deleted pages to the new 'landscapes' page
+/fencing-mornington/    /landscapes/    301
+/decking/               /landscapes/    301

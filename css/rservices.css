@@ -1,0 +1,230 @@
+/* --- Services Page Styles --- */
+
+/* --- Service Hero --- */
+#service-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.container {
+    max-width: 1400px; /* desktop limit */
+} 
+
+#service-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(43, 43, 43, 0.5); 
+}
+
+.service-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.service-hero-content h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-hero-p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* --- Service Intro Section --- */
+.service-feature-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-soft);
+    box-shadow: var(--shadow-soft);
+}
+
+/* --- Types of Walls Section --- */
+.service-type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    margin-bottom: var(--spacing-xxl);
+}
+
+.service-type-grid:last-of-type {
+    margin-bottom: 0;
+}
+
+.service-type-grid.reverse .service-type-img {
+    order: 2;
+}
+
+/*
+    NEW RULE ADDED
+    This turns the image's container into a "centering box".
+*/
+.service-type-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+    MODIFIED RULE
+    This makes the image smaller while keeping it responsive.
+*/
+.service-type-grid img {
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-soft);
+    width: 100%;          /* Ensures the image scales down on smaller screens */
+    height: auto;         /* Maintains the image's aspect ratio */
+    max-width: 600px;     /* Sets the maximum size. Feel free to adjust this pixel value! */
+}
+
+.service-type-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.service-type-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: var(--spacing-md);
+}
+
+.service-type-text ul li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.service-type-text ul li i {
+    color: var(--color-primary);
+}
+
+
+/* --- CTA Section --- */
+.cta-text-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section[aria-labelledby="cta-heading"] .grid-2-cols {
+    column-gap: var(--spacing-xxl);
+}
+
+
+/* ==============================================
+    Responsive Adjustments (Mobile First)
+==============================================
+*/
+@media (max-width: 768px) {
+
+    /* --- General Adjustments --- */
+    .section-padded {
+        padding: var(--spacing-xl) 0;
+    }
+
+    h2.heading-serif, 
+    h2#types-heading,
+    h2#values-heading {
+        font-size: 2.5rem;
+    }
+
+    .grid-2-cols {
+        grid-template-columns: 1fr; 
+    }
+
+    /* --- Hero Section --- */
+    .service-hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .service-hero-p {
+        font-size: 1.2rem;
+    }
+
+    /* --- Intro Section --- */
+    .section-white-bg .grid-2-cols > div {
+        text-align: center;
+    }
+
+    .section-white-bg .grid-2-cols .button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .service-feature-image {
+        margin-top: var(--spacing-lg);
+    }
+    
+    .value-props {
+        gap: var(--spacing-sm);
+    }
+
+    /* --- Types of Walls Section --- */
+    .service-type-grid,
+    .service-type-grid.reverse {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .service-type-grid.reverse .service-type-img {
+        order: 0; 
+    }
+    
+    .service-type-text ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    /* --- Final CTA Form Section --- */
+    .cta-text-content {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    /* Removes the bottom margin from the last paragraph in the CTA text block */
+    .cta-text-content > p:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+
+.service-feature-imagerock {
+    max-height: 400px;
+}
+
+/* --- Fix for the hardscaping feature section --- */
+
+/* 1. Vertically align the text and image columns */
+.grid-2-cols {
+    align-items: center;
+}
+
+/* 2. Style the portrait image to fill its container like a landscape photo */
+.service-feature-imagerock {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Creates a pleasant landscape shape */
+    object-fit: cover;   /* This is the magic part: it crops the image to fit */
+    border-radius: 8px;  /* Optional: adds slightly rounded corners */
+    display: block;
+}

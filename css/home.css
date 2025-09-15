@@ -1,0 +1,218 @@
+
+#hero {
+    height: calc(100vh - 72px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-canvas);
+}
+
+#hero .hero-title{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 3.7rem;
+}
+
+.hero-ctas {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* optional, for vertical alignment */
+  padding: 0; /* remove any unwanted padding */
+}
+
+.hero-ctas a {
+  margin-left: 0;
+}
+
+#hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* optional, ensures vertical centering if parent has height */
+}
+
+#hero-logo img { 
+    height: 33rem;
+    width: auto;
+}
+
+.hero-gradient {
+    color: var(--color-primary);
+}
+
+h1 {
+    
+    font-size: 4.2rem;
+}
+
+.home-hero-p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-charcoal);
+    width: 90%;
+    margin-top: 
+}
+
+
+.service-highlights {
+  /*background-color: rgb(145, 183, 189, 0.15);*/
+  background-color: var(--color-canvas);
+}
+
+#ctal {
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* --- about section --- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1.8fr; 
+  gap: 1rem;
+  align-items: start;
+}
+
+.about-col-left h2 {
+  margin: 0;
+}
+
+.about-col-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+
+.about-col-right p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+}
+
+.about-col-right .button {
+  margin-top: var(--spacing-md);
+  align-self: center;
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* --- Services --- */
+
+/* Services Grid */
+.grid-services {
+  display: grid;
+  grid-template-columns: 1fr; /* default: mobile single column */
+  gap: var(--spacing-xl);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .service-section .service-card {
+    flex-direction: column;       /* stack image above text */
+    align-items: center;          
+    text-align: center;           
+  }
+
+  .service-section .service-card img.card-icon {
+    margin: 0 auto var(--spacing-md); 
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-services {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 on tablets */
+    flex-direction: column;      
+    align-items: center;      
+    text-align: center;         
+  }
+
+  .service-section .service-card img.card-icon {
+    margin: 0 auto var(--spacing-md); 
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-services {
+    grid-template-columns: repeat(4, 1fr); /* 4 across on large screens */
+  }
+}
+
+.service-section .container {
+  max-width: 1400px; /* wider than default 1250px */
+}
+
+/* Service block */
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-6px);
+}
+
+/* Service images */
+.service-item img {
+  width: 100%;
+  max-width: 280px;   /* keeps them consistent but not huge */
+  height: auto;
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: var(--spacing-md);
+  object-fit: cover;
+}
+
+/* Headings & text */
+.service-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card {
+  border-radius: 30px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-item .learn-more {
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+/* Service cards */
+.service-section .service-card {
+  padding: var(--spacing-md); 
+  transform: none; 
+}
+
+/* Images inside cards */
+.service-section .service-card img.card-icon {
+  max-width: 400px; /* smaller than before, keeps cards neat */
+  width: 100%;
+  height: auto;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12), 0 8px 15px rgba(146,184,189,0.2);
+}

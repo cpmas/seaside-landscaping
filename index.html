@@ -7,9 +7,19 @@
     <meta name="description" content="Specialists in durable retaining walls, natural rock work, and premium turf across Mornington, Mount Martha, Frankston, and beyond. Get a fast quote today.">
     <link rel="canonical" href="https://seasidelandscaping.com.au/">
 
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-Tbd8m9t2..." 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -61,75 +71,151 @@
     </script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
+    <header class="site-header" role="banner">
+    <div class="container header-inner">
+        <a href="/" class="logo-link" aria-label="Seaside Landscaping Home">
+            <img class="logo-icon" width="40" height="40" src="/assets/icons/logo.png">
+            <span class="site-name">Seaside Landscaping</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+            <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Open main menu">
+                <span class="burger-icon"></span>
+            </button>
+            <ul class="nav-list" id="main-menu">
+                <li><a href="/">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="/services/">Services <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/landscapes/">Landscape Construction</a></li>
+                        <li><a href="/retaining-walls-mornington/">Retaining Walls</a></li>
+                        <li><a href="/excavation-mornington/">Excavation & Earthworks</a></li>
+                        <li><a href="/turfing-mornington/">Turfing & Lawn Installation</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/" class="button button-primary button-small">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <main>
-        <section class="hero-section" role="region" aria-label="Introduction to Seaside Landscaping">
-            <picture>
-                <source srcset="assets/images/hero-bg.webp" type="image/webp">
-                <img src="assets/images/hero-bg.jpg" alt="Coastal landscape with earth tones, representing Mornington Peninsula excavation and landscaping" class="hero-background" loading="eager">
-            </picture>
-            <div class="hero-content">
-                <h1 class="hero-headline text-shadow">Earth-first landscaping: excavation, walls & turfing built to last.</h1>
-                <p class="hero-subheadline text-shadow">Specialists in retaining walls, natural rock work, and premium turf across the Mornington Peninsula.</p>
-                <div class="hero-ctas">
-                    <a href="contact.html" class="button button-primary">Get a fast quote</a>
-                    <a href="projects.html" class="button button-secondary">View recent projects</a>
+         <section id="hero">
+            <div class="container">
+              <div class="grid-2-cols">
+                
+                <div class="fade-in">
+                  <h1 class="hero-title ">
+                    Crafting Beautiful Landscapes On 
+                    <span class="hero-gradient" >The Mornington Peninsula</span>
+                  </h1>
+
+                  <p class="home-hero-p">
+                    Professional excavation, retaining walls, and turfing services on the Mornington Peninsula.
+                    Quality workmanship & local expertise.
+                  </p>
+
+                  <div class="hero-ctas">
+                    <a href="/contact/" class="button button-primary button-large" id="hero-button">Get Free Quote</a>
+                   </div>
+
+                  
                 </div>
+
+                <div id="hero-logo">
+                    <img id="hero-logoimg"
+                      src="/assets/icons/logo.png"
+                      alt="Seaside Landscaping - Professional landscaping services on Mornington Peninsula"
+                      loading="eager"
+                    />
+                  </div>
+
+              </div>
             </div>
+          </section>
+        
+
+        <section class="section-sml-padded section-white-bg about-intro" aria-labelledby="about-heading">
+          <div class="container about-grid fade-in">
+            
+            <div class="about-col-left">
+              <h2 id="about-heading" class="heading-serif">
+                Landscaping Delivered with Efficiency and Excellence
+              </h2>
+            </div>
+
+            <div class="about-col-right">
+              <p class="about-lead">At Seaside Landscaping, we take pride in creating beautiful, functional outdoor spaces for homeowners on the Mornington Peninsula.</p>
+              <p>Our focus is on delivering exceptional results with clear communication and outstanding customer service.</p>
+              <p>With years of experience and a reputation for reliability, our team works with you every step of the way to ensure a smooth, hassle-free experience.</p>
+              <a href="/about/" class="button button-primary">About Us</a>
+            </div>
+
+          </div>
         </section>
 
-        <section class="section-padded service-highlights" aria-labelledby="services-heading">
-            <div class="container">
-                <h2 id="services-heading" class="text-center heading-serif">Our Core Services</h2>
-                <p class="text-center section-sub-intro">Building strong foundations and beautiful outdoor spaces that endure.</p>
-                <div class="service-cards grid-4-cols fade-in">
-                    <a href="services.html#excavation" class="card service-card">
-                        <img src="assets/icons/icon-excavation.svg" alt="Excavation icon" class="card-icon" width="60" height="60" loading="lazy">
+       <section class="section-padded section-canvas-bg service-section" aria-labelledby="services-heading">
+        <div class="container">
+            <h2 id="services-heading" class="text-center heading-serif">Our Core Services</h2>
+            <p class="text-center section-sub-intro">Building strong foundations and beautiful outdoor spaces that endure.</p>
+
+            <div class="grid-services fade-in">
+                <a href="/landscapes/" class="card service-card">
+                    <img src="/assets/images/rockw.png" alt="Rock wall icon" class="card-icon" loading="lazy">
+                    <div class="card-content">
+                        <h3>Landscaping & Features</h3>
+                        <p>Beautiful, robust walls crafted from local stone, feature fencing, and more.</p>
+                    </div>
+                </a>
+
+                <a href="/retaining-walls-mornington/" class="card service-card">
+                    <img src="/assets/images/rwall.png" alt="Retaining wall icon" class="card-icon" loading="lazy">
+                    <div class="card-content">
+                        <h3>Retaining Walls</h3>
+                        <p>Durable concrete sleeper & timber solutions with proper drainage and footings.</p>
+                    </div>
+                </a>
+
+                <a href="/turfing-mornington/" class="card service-card">
+                    <img src="/assets/images/turf.png" alt="Turfing icon" class="card-icon" loading="lazy">
+                    <div class="card-content">
+                        <h3>Turfing</h3>
+                        <p>Premium turf varieties with thorough soil preparation and levelling.</p>
+                    </div>
+                </a>
+
+                <a href="/excavation-mornington/" class="card service-card">
+                    <img src="/assets/images/excavationg.png" alt="Excavation icon" class="card-icon" loading="lazy">
+                    <div class="card-content">
                         <h3>Excavation</h3>
                         <p>Site cuts, trenching, post holes, and precise soil removal with laser-level finish.</p>
-                        <span class="learn-more">Learn more &rarr;</span>
-                    </a>
-                    <a href="services.html#retaining-walls" class="card service-card">
-                        <img src="assets/icons/icon-retaining.svg" alt="Retaining wall icon" class="card-icon" width="60" height="60" loading="lazy">
-                        <h3>Retaining Walls</h3>
-                        <p>Durable concrete sleeper, timber, and engineered solutions with proper drainage.</p>
-                        <span class="learn-more">Learn more &rarr;</span>
-                    </a>
-                    <a href="services.html#rock-walls" class="card service-card">
-                        <img src="assets/icons/icon-rockwall.svg" alt="Rock wall icon" class="card-icon" width="60" height="60" loading="lazy">
-                        <h3>Rock Walls</h3>
-                        <p>Beautiful, robust walls crafted from local stone for garden terraces and entries.</p>
-                        <span class="learn-more">Learn more &rarr;</span>
-                    </a>
-                    <a href="services.html#turfing" class="card service-card">
-                        <img src="assets/icons/icon-turfing.svg" alt="Turfing icon" class="card-icon" width="60" height="60" loading="lazy">
-                        <h3>Turfing</h3>
-                        <p>Premium turf varieties with thorough soil preparation, levelling, and aftercare guidance.</p>
-                        <span class="learn-more">Learn more &rarr;</span>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
+        </div>
         </section>
 
-        <section class="section-padded section-accent-bg" aria-labelledby="values-heading">
+        <section class="section-padded section-white-bg" aria-labelledby="values-heading">
             <div class="container">
                 <h2 id="values-heading" class="text-center heading-serif">Our Promise to You</h2>
+                <p class="centered" style="border-top:1px solid var(--color-accent); padding-top:2rem;">At Seaside Landscaping, we understand that choosing the right landscaper is an important decision, and we want you to feel confident in choosing us. That’s why we offer a Satisfaction Commitment with every project we undertake. We pride ourselves on being easy to deal with, keeping communication clear and responsive, so you’re always informed and never left waiting. Our customer service is built on reliability and flexibility, making the entire process hassle-free from start to finish. With consistent reliability and a focus on delivering exceptional results, we will ensure that your project meets the highest standards</p>
                 <div class="value-props grid-4-cols fade-in">
                     <div class="value-item">
-                        <img src="assets/icons/icon-insured.svg" alt="Shield icon" class="value-icon" width="48" height="48" loading="lazy">
-                        <p><strong>Fully Insured & Ticketed</strong><br>Peace of mind with every project.</p>
+                        <i class="fa-regular fa-file-lines fa-3x" class="value-icon"></i> 
+                        <p><strong>Transparent Pricing</strong><br>Clear and upfront pricing. Ensuring no surprises or hidden costs</p>
                     </div>
                     <div class="value-item">
-                        <img src="assets/icons/icon-consultation.svg" alt="Calendar icon" class="value-icon" width="48" height="48" loading="lazy">
-                        <p><strong>On-site Consultation</strong><br>Understanding your vision in person.</p>
+                        <i class="fa-regular fa-message fa-3x" class="value-icon" ></i>
+                        <p><strong>Customer Focused Service</strong><br>We prioritise communication and make the entire process easy and hassle-free</p>
                     </div>
                     <div class="value-item">
-                        <img src="assets/icons/icon-quote.svg" alt="Clipboard icon" class="value-icon" width="48" height="48" loading="lazy">
-                        <p><strong>Fixed, Itemised Quotes</strong><br>Clear pricing, no hidden surprises.</p>
+                        <i class="fa-solid fa-rotate-right fa-3x" class="value-icon"></i>
+                        <p><strong>Fast Turnaround</strong><br>We Specialise in projects that are completed in 1-10 days, ideal for homeowners looking for efficient solutions</p>
                     </div>
                     <div class="value-item">
-                        <img src="assets/icons/icon-clean.svg" alt="Broom icon" class="value-icon" width="48" height="48" loading="lazy">
+                        <i class="fa-regular fa-circle-check fa-3x" class="value-icon"></i>
                         <p><strong>Clean Sites, On Time</strong><br>Respecting your property and schedule.</p>
                     </div>
                 </div>
@@ -138,15 +224,71 @@
 
         <section class="section-padded text-center section-canvas-bg fade-in" aria-labelledby="cta-heading">
             <div class="container container-narrow">
-                <h2 id="cta-heading" class="heading-serif">Ready to transform your outdoor space?</h2>
-                <p>Let's discuss your project and bring your vision to life with lasting quality.</p>
-                <a href="contact.html" class="button button-primary button-large">Get a fast quote today</a>
+                <h2 id="cta-heading" class="heading-serif">Have An Idea In Mind?</h2>
+                <h5 id="ctal">Let's Make It Happen!</h5>
+                <p>Contact us today for a free consultation and see how we can bring your vision to life</p>
+                <a href="/contact/" class="button button-primary button-large">Get a fast quote today</a>
             </div>
         </section>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-col" id="footer-img">
+            <div class="footer-brand">
+              <img src="/assets/icons/logo.png" alt="Seaside Landscaping Logo" class="footer-logo" />
+            </div>
+       
+          </div>
 
-    <script src="main.js" defer></script>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/services/">Services</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/contact/">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="/excavation-mornington/">Excavation</a></li>
+              <li><a href="/retaining-walls-mornington/">Retaining Walls</a></li>
+              <li><a href="/turfing-mornington/">Turfing</a></li>
+              <li><a href="/landscapes/">Landscaping</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Information</h4>
+            <ul>
+              <li><a href="tel:&#048;&#052;&#048;&#055;&#053;&#055;&#048;&#050;&#056;&#056;"><i class="icon-phone"></i> &#048;&#052;&#048;&#055;&#053;&#055;&#048;&#050;&#056;&#056;</a></li>
+              <li><a href="mailto:&#105;&#110;&#102;&#111;&#64;&#115;&#101;&#097;&#115;&#105;&#100;&#101;&#108;&#097;&#110;&#100;&#115;&#099;&#097;&#112;&#105;&#110;&#103;&#046;&#099;&#111;&#109;&#046;&#097;&#117;><i class="icon-mail"></i> &#105;&#110;&#102;&#111;&#64;&#115;&#101;&#097;&#115;&#105;&#100;&#101;&#108;&#097;&#110;&#100;&#115;&#099;&#097;&#112;&#105;&#110;&#103;&#046;&#099;&#111;&#109;&#046;&#097;&#117;</a></li>
+              <li><i class="icon-map"></i> Mornington Peninsula, VIC</li>
+              <li>
+                <i class="icon-clock"></i>
+                <div>
+                  <div>Mon-Fri: 9AM-5PM</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Seaside Landscaping. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="/main.js" defer></script>
 </body>
+
 </html>

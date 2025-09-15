@@ -1,0 +1,104 @@
+/* --- Contact Form Styles --- */
+
+#cta-form {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm); /* UPDATED: Reduced gap for a tighter layout */
+    text-align: left;
+    background: var(--color-bgww);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-soft);
+    box-shadow: var(--shadow-soft);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#cta-form label {
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+    color: var(--color-accent);
+}
+
+#cta-form input,
+#cta-form select,
+#cta-form textarea {
+    width: 100%;
+    padding: 0.8rem var(--spacing-sm); /* UPDATED: Reduced padding */
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    font-family: var(--font-sans);
+    font-size: 0.9rem; /* UPDATED: Slightly smaller font */
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#cta-form select:invalid {
+    color: var(--color-charcoal);
+    opacity: 0.7;
+}
+
+
+#cta-form select option {
+    color: #2b2b2b;
+}
+
+
+#cta-form input:focus,
+#cta-form select:focus,
+#cta-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-bluefade);
+}
+
+#cta-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-submit-button {
+    width: 100%;
+    border: none;
+}
+
+/* --- Fix for Shrunken Form on Mobile Service Pages --- */
+@media (max-width: 768px) {
+  
+  section[aria-labelledby="cta-heading"] .grid-2-cols > div:last-child {
+    width: 100%;
+  }
+}
+
+/* --- Consistent Dropdown (Select) Styling --- */
+
+/* Create a wrapper to hold our custom arrow */
+.select-wrapper {
+    position: relative;
+    display: block;
+}
+
+/* Style the select element itself */
+#cta-form .select-wrapper select {
+    -webkit-appearance: none; /* Removes default Safari/Chrome styling */
+    -moz-appearance: none;    /* Removes default Firefox styling */
+    appearance: none;         /* Removes default styling */
+    padding-right: 2.5rem;    /* Add space on the right for our new arrow */
+}
+
+/* Create a new, custom arrow using a pseudo-element */
+.select-wrapper::after {
+    content: '\f078'; /* Font Awesome down-chevron icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--color-primary);
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures you can click through the arrow */
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Seaside Landscaping | Mornington Peninsula</title>
+    <meta name="description" content="Get a free quote for your landscaping project. Contact Seaside Landscaping for excavation, retaining walls, and turfing on the Mornington Peninsula.">
+    
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/rservices.css"> 
+    <link rel="stylesheet" href="/css/services.css"> 
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/forms.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-Tbd8m9t2..." 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+          <a href="/" class="logo-link" aria-label="Seaside Landscaping Home">
+              <img class="logo-icon" width="40" height="40" src="/assets/icons/logo.png">
+              <span class="site-name">Seaside Landscaping</span>
+          </a>
+          <nav class="main-nav" aria-label="Main Navigation">
+              <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Open main menu">
+                  <span class="burger-icon"></span>
+              </button>
+              <ul class="nav-list" id="main-menu">
+                  <li><a href="/">Home</a></li>
+                  <li class="dropdown">
+                      <a href="/services/">Services <i class="fa-solid fa-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/landscapes/">Landscape Construction</a></li>
+                          <li><a href="/retaining-walls-mornington/">Retaining Walls</a></li>
+                          <li><a href="/excavation-mornington/">Excavation & Earthworks</a></li>
+                          <li><a href="/turfing-mornington/">Turfing & Lawn Installation</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="/about/">About</a></li>
+                  <li><a href="/contact/">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+
+    <main>
+
+        <section class="section-padded section-white-bg">
+            <div class="container container-narrow text-center fade-in">
+                <h1 class="heading-serif">Get in Touch</h1>
+                <p class="section-sub-intro">Ready to start your project or have a question for our team?</p>
+            </div>
+        </section>
+
+        <section class="section-padded section-canvas-bg fade-in">
+            <div class="container">
+                <div class="grid-2-cols" style="align-items: flex-start; gap: var(--spacing-xxl);">
+
+                    <div class="contact-details-col">
+                        <h2 class="heading-serif" style="margin-top: 0;">Contact Details</h2>
+                        <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
+                            <li style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                <a href="tel:0407570288" style="display: flex; align-items: center;">
+                                    <i class="fa-solid fa-phone" style="margin-right: 1rem; width: 20px; color: var(--color-primary);"></i>
+                                    <span>0407 570 288</span>
+                                </a>
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                <a href="mailto:info@seasidelandscaping.com.au" style="display: flex; align-items: center;">
+                                    <i class="fa-solid fa-envelope" style="margin-right: 1rem; width: 20px; color: var(--color-primary);"></i>
+                                    <span>info@seasidelandscaping.com.au</span>
+                                </a>
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                <i class="fa-solid fa-clock" style="margin-right: 1rem; width: 20px; color: var(--color-primary);"></i>
+                                <span>Mon - Fri: 9:00 AM to 5:00 PM</span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                <i class="fa-solid fa-map-marker-alt" style="margin-right: 1rem; width: 20px; color: var(--color-primary);"></i>
+                                <span>Serving the Mornington Peninsula</span>
+                            </li>
+                        </ul>
+                        <p style="margin-top: 2rem;">For the fastest response, please fill out the project form with as much detail as possible. We typically reply within one business day.</p>
+                    </div>
+
+                    <div class="contact-form-col">
+                        <form id="cta-form" name="contact" netlify>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email"  required>
+                            </div>
+                            <div class="form-group">
+                                <label for="suburb">Suburb</label>
+                                <input type="text" id="suburb" name="suburb" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Estimated Budget</label>
+                                <div class="select-wrapper">
+                                    <select id="budget" name="budget" required>
+                                        <option value="" disabled selected>Select your budget range</option>
+                                        <option value="$1,000 - $3,000">$1,000 - $3,000</option>
+                                        <option value="$3,000 - $5,000">$3,000 - $5,000</option>
+                                        <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                                        <option value="$10,000 - $20,000">$10,000 - $20,000</option>
+                                        <option value="$20,000+">$20,000+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Project Details</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about your project..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="button button-primary button-large form-submit-button">Send Enquiry</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-col" id="footer-img">
+            <div class="footer-brand">
+              <img src="/assets/icons/logo.png" class="footer-logo" />
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/services/">Services</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/contact/">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="/excavation-mornington/">Excavation</a></li>
+              <li><a href="/retaining-walls-mornington/">Retaining Walls</a></li>
+              <li><a href="/turfing-mornington/">Turfing</a></li>
+              <li><a href="/landscapes/">Landscaping</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Information</h4>
+            <ul>
+              <li><a href="tel:0407570288">0407 570 288</a></li>
+              <li><a href="mailto:info@seasidelandscaping.com.au">info@seasidelandscaping.com.au</a></li>
+              <li>Mornington Peninsula, VIC</li>
+              <li>Mon-Fri: 9AM-5PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Seaside Landscaping. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="/main.js" defer></script>
+</body>
+</html>

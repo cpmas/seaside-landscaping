@@ -2,6 +2,17 @@
 // Handles partial loading, UI interactions, gallery, and contact form
 
 const startTime = Date.now();
+// --- Sticky Header Scroll Effect ---
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+    // Add .scrolled class if user scrolls more than 50px, otherwise remove it
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
 
 async function loadPartial(id, url) {
   const container = document.getElementById(id);
@@ -121,40 +132,37 @@ function initGallery() {
   });
 }
 
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-  const timeField = document.getElementById('time-on-page');
-  const messages = document.getElementById('form-messages');
-  const submitBtn = document.getElementById('submit-button');
+// ✅ Carousel
+function initCarousels() {
+  document.querySelectorAll('.carousel-js').forEach(carousel => {
+    const slides = carousel.querySelectorAll('.slides img');
+    const dots = carousel.querySelectorAll('.carousel-controls .dot');
+    let currentIndex = 0;
 
-  form.addEventListener('submit', async e => {
-    if (!form.checkValidity()) return;
-    e.preventDefault();
-    if (form.dataset.submitting) return;
-    form.dataset.submitting = 'true';
-    submitBtn.disabled = true;
-    timeField.value = Math.round((Date.now() - startTime) / 1000);
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
-      if (res.ok) {
-        messages.textContent = "Thanks! We'll be in touch soon.";
-        form.reset();
-      } else {
-        messages.textContent = 'Sorry, there was a problem. Please try again.';
-      }
-    } catch (err) {
-      messages.textContent = 'Network error. Please try again.';
+    function showSlide(index) {
+      slides.forEach((slide, i) =>
+        slide.classList.toggle('active', i === index)
+      );
+      dots.forEach((dot, i) =>
+        dot.classList.toggle('active', i === index)
+      );
+      currentIndex = index;
     }
-    submitBtn.disabled = false;
-    form.dataset.submitting = '';
+
+    // Click dots only (no autoplay)
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        showSlide(i);
+      });
+    });
+
+    // Init first slide
+    showSlide(0);
   });
 }
 
+
+// ✅ Init everything
 async function init() {
   await loadPartial('header-placeholder', 'partials/header.html');
   await loadPartial('footer-placeholder', 'partials/footer.html');
@@ -162,8 +170,7 @@ async function init() {
   initFooter();
   observeSections();
   initGallery();
-  initContactForm();
+  initCarousels();
 }
 
 document.addEventListener('DOMContentLoaded', init);
-
