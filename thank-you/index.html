@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Seaside Landscaping</title>
+    <meta name="robots" content="noindex"> 
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/rservices.css"> 
+    <link rel="stylesheet" href="/css/services.css"> 
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/forms.css">
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Seaside Landscaping" />
+    <link rel="manifest" href="/assets/icons/site.webmanifest" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-Tbd8m9t2..." 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    </head>
+<body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+          <a href="/" class="logo-link" aria-label="Seaside Landscaping Home">
+              <img class="logo-icon" width="180" height="auto" src="/assets/icons/hlogo.png">
+          </a>
+          <nav class="main-nav" aria-label="Main Navigation">
+              <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Open main menu">
+                  <span class="burger-icon"></span>
+              </button>
+              <ul class="nav-list" id="main-menu">
+                  <li><a href="/">Home</a></li>
+                  <li class="dropdown">
+                      <a href="/services/">Services <i class="fa-solid fa-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/landscapes/">Landscape Construction</a></li>
+                          <li><a href="/retaining-walls-mornington/">Retaining Walls</a></li>
+                          <li><a href="/excavation-mornington/">Excavation & Earthworks</a></li>
+                          <li><a href="/turfing-mornington/">Turfing & Lawn Installation</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="/about/">About</a></li>
+                  <li><a href="/contact/">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+
+    <main>
+        <section class="section-padded section-white-bg" style="min-height: 60vh; display: flex; align-items: center; text-align: center;">
+            <div class="container container-narrow fade-in">
+                <h1 class="heading-serif">Thank You!</h1>
+                <p class="section-sub-intro" style="font-size: 1.2rem;">Your enquiry has been sent successfully. We'll be in touch within one business day.</p>
+                <a href="/" class="button button-primary" style="margin-top: 1rem;">Return to Homepage</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-col" id="footer-img">
+            <div class="footer-brand">
+              <img src="/assets/icons/logo.png" class="footer-logo" />
+            </div>
+            <p class="footer-description">
+              Seaside Landscaping on the Mornington Peninsula. Excavation, Retaining walls, Turfing & more.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/services/">Services</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/contact/">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="/excavation-mornington/">Excavation</a></li>
+              <li><a href="/retaining-walls-mornington/">Retaining Walls</a></li>
+              <li><a href="/turfing-mornington/">Turfing</a></li>
+              <li><a href="/landscapes/">Landscaping</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Information</h4>
+            <ul>
+                <li><a href="tel:0407570288">0407 570 288</a></li>
+                <li><a href="mailto:info@seasidelandscaping.com.au">info@seasidelandscaping.com.au</a></li>
+                <li>Mornington Peninsula, VIC</li>
+                <li>Mon-Fri: 9AM-5PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Seaside Landscaping. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="/main.js" defer></script>
+</body>
+</html>

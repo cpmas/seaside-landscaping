@@ -8,7 +8,7 @@
     text-align: left;
     background: var(--color-bgww);
     padding: var(--spacing-lg);
-    border-radius: var(--radius-soft);
+    border-radius: var(--radius-medium);
     box-shadow: var(--shadow-soft);
 }
 
@@ -76,23 +76,20 @@
 
 /* --- Consistent Dropdown (Select) Styling --- */
 
-/* Create a wrapper to hold our custom arrow */
 .select-wrapper {
     position: relative;
     display: block;
 }
 
-/* Style the select element itself */
 #cta-form .select-wrapper select {
-    -webkit-appearance: none; /* Removes default Safari/Chrome styling */
-    -moz-appearance: none;    /* Removes default Firefox styling */
-    appearance: none;         /* Removes default styling */
-    padding-right: 2.5rem;    /* Add space on the right for our new arrow */
+    -webkit-appearance: none; 
+    -moz-appearance: none;  
+    appearance: none;        
+    padding-right: 2.5rem;    
 }
 
-/* Create a new, custom arrow using a pseudo-element */
 .select-wrapper::after {
-    content: '\f078'; /* Font Awesome down-chevron icon */
+    content: '\f078'; 
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: var(--color-primary);
@@ -100,5 +97,5 @@
     top: 50%;
     right: 1rem;
     transform: translateY(-50%);
-    pointer-events: none; /* Ensures you can click through the arrow */
+    pointer-events: none; 
 }

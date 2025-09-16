@@ -132,28 +132,38 @@ function initGallery() {
   });
 }
 
-// ✅ Carousel
+// ✅ Carousel with Arrows
 function initCarousels() {
   document.querySelectorAll('.carousel-js').forEach(carousel => {
     const slides = carousel.querySelectorAll('.slides img');
-    const dots = carousel.querySelectorAll('.carousel-controls .dot');
+    const prevBtn = carousel.querySelector('.carousel-btn--prev');
+    const nextBtn = carousel.querySelector('.carousel-btn--next');
     let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    if (totalSlides <= 1) {
+        if(prevBtn) prevBtn.style.display = 'none';
+        if(nextBtn) nextBtn.style.display = 'none';
+        return; // Don't initialize if there's only one slide
+    }
 
     function showSlide(index) {
-      slides.forEach((slide, i) =>
-        slide.classList.toggle('active', i === index)
-      );
-      dots.forEach((dot, i) =>
-        dot.classList.toggle('active', i === index)
-      );
+      slides.forEach((slide, i) => {
+        const isActive = i === index;
+        slide.classList.toggle('active', isActive);
+        slide.setAttribute('aria-hidden', !isActive);
+      });
       currentIndex = index;
     }
 
-    // Click dots only (no autoplay)
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        showSlide(i);
-      });
+    nextBtn.addEventListener('click', () => {
+      let newIndex = (currentIndex + 1) % totalSlides;
+      showSlide(newIndex);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      let newIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(newIndex);
     });
 
     // Init first slide

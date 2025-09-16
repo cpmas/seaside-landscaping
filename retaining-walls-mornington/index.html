@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="/css/rservices.css"> 
     <link rel="stylesheet" href="/css/forms.css">
 
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Seaside Landscaping" />
+    <link rel="manifest" href="/assets/icons/site.webmanifest" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -29,8 +36,7 @@
     <header class="site-header" role="banner">
     <div class="container header-inner">
         <a href="/" class="logo-link" aria-label="Seaside Landscaping Home">
-            <img class="logo-icon" width="40" height="40" src="/assets/icons/logo.png">
-            <span class="site-name">Seaside Landscaping</span>
+            <img class="logo-icon" width="180" height="auto" src="/assets/icons/hlogo.png">
         </a>
 
         <nav class="main-nav" aria-label="Main Navigation">
@@ -57,7 +63,7 @@
 </header>
 
     <main>
-        <section id="service-hero" style="background-image: url('/assets/images/services/retaining/one.png');">
+        <section id="service-hero" style="background-image: url('/assets/images/services/retaining/one.jpg');">
             <div class="service-hero-content">
                 <div class="container text-center">
                     <h1 class="hero-title hero-gradient">Retaining Walls</h1>
@@ -76,7 +82,7 @@
                         <a href="/contact/" class="button button-primary">Request a Consultation</a>
                     </div>
                     <div>
-                        <img src="/assets/images/services/retaining/two.png" alt="A professionally built concrete sleeper retaining wall." class="service-feature-image">
+                        <img src="/assets/images/services/retaining/two.jpg" alt="A professionally built concrete sleeper retaining wall." class="service-feature-image">
                     </div>
                 </div>
             </div>
@@ -89,7 +95,7 @@
                 
                 <div class="service-type-grid">
                     <div class="service-type-img">
-                        <img src="/assets/images/services/retaining/three.png" alt="Close-up of a modern concrete sleeper retaining wall." loading="lazy">
+                        <img src="/assets/images/services/retaining/three.jpg" alt="Close-up of a modern concrete sleeper retaining wall." loading="lazy">
                     </div>
                     <div class="service-type-text">
                         <h3>Concrete Sleeper Walls</h3>
@@ -104,7 +110,7 @@
 
                 <div class="service-type-grid reverse">
                     <div class="service-type-img">
-                        <img src="/assets/images/services/retaining/four.png" alt="A classic timber retaining wall in a garden setting." loading="lazy">
+                        <img src="/assets/images/services/retaining/four.jpg" alt="A classic timber retaining wall in a garden setting." loading="lazy">
                     </div>
                     <div class="service-type-text">
                         <h3>Treated Pine & Hardwood Walls</h3>
@@ -155,7 +161,7 @@
             </div>
 
             <div>
-                <form id="cta-form" name="contact" netlify>
+                <form id="cta-form" name="contact" action="/thank-you/" netlify>
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="e.g., John Smith" required>

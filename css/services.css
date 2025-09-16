@@ -1,4 +1,4 @@
-/* --- Services --- */
+/* --- Services Page Styles --- */
 
 /* Keep sticky header from overlapping anchor headings */
 :target::before {
@@ -6,26 +6,6 @@
   display: block;
   height: 80px;       /* match your header height */
   margin-top: -80px;  /* offset the scroll */
-}
-
-/* Service detail wrapper */
-@media (max-width: 768px) {
-  .service-detail {
-    background: var(--color-bgww);
-    border-radius: var(--radius-soft);
-    box-shadow: var(--shadow-soft);
-    margin-bottom: var(--spacing-lg);
-    padding: var(--spacing-lg);
-  }
-}
-
-/* Service section container */
-.service-detail .container {
-  max-width: 1400px; /* desktop limit */
-  width: 100%;
-  padding: 0 1rem;   /* breathing room */
-  margin: 0 auto;
-  box-sizing: border-box;
 }
 
 /* Service grid (2 columns desktop, stack mobile) */
@@ -43,64 +23,29 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
-
-  /* Force consistent order on mobile = image first, text second */
-  .grid-2-cols-reverse > .service-image {
-    order: 1;
-  }
-  .grid-2-cols-reverse > .service-content {
-    order: 2;
-  }
 }
 
-/* Service block layout (used for Rock Walls + Fencing side by side) */
-.service-block {
-  display: flex;
-  flex-direction: column;
-}
-
-.service-block .service-image {
-  flex-shrink: 0;
-  margin-bottom: var(--spacing-md);
-}
-
-.service-block .service-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* Service content (text) */
+/* Service content (text block) */
 .service-content {
   max-width: 600px;
   margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: center; /* default: center headings + buttons */
 }
 
-.service-content h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: var(--spacing-md);
-  color: var(--color-accent);
-  font-family: "Montserrat", sans-serif;
-  text-align: center; /* explicitly center */
+.service-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .service-content p,
 .service-content ul {
   font-size: 1rem;
   text-align: left; /* body text stays left aligned */
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
 }
 
 @media (max-width: 480px) {
-  .service-content h2 {
-    font-size: 1.7rem;
+  .service-content h3 {
+    font-size: 1.5rem;
   }
   .service-content p,
   .service-content ul {
@@ -111,113 +56,70 @@
 /* Center button inside service-content */
 .service-content .button {
   display: inline-block;
-  margin: var(--spacing-md) auto 0 auto;
-  text-align: center;
+  margin-top: var(--spacing-md);
 }
 
-/* Clean list styling */
-.service-content ul {
-  list-style: none;
-  margin: var(--spacing-md) 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr; /* mobile: single column */
-  gap: 0.75rem;
-}
 
-.service-content li {
-  position: relative;
-  padding-left: 1.2rem;
-}
-
-.service-content li::before {
-  content: "-";
-  color: var(--color-primary);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
-/* Tablet+ two columns, no split items */
-@media (min-width: 768px) {
-  .service-content ul {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem 2rem;
-  }
-}
-
-/* Carousel wrapper */
-.carousel-js {
+/* --- Carousel Styles --- */
+.service-image.carousel-js {
   position: relative;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   overflow: hidden;
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.4s ease;
 }
 
-.slides {
-  position: relative;
-  width: 100%;
-  min-height: 350px; /* reserve space, but allow taller if needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.service-image.carousel-js:hover {
+  transform: scale(1.03);
 }
 
 .slides img {
   display: none;
-  max-width: 100%;
-  max-height: 400px;
-  width: auto;
-  height: auto;
-  object-fit: contain; /* show the full image without cropping */
-  border-radius: var(--radius-soft);
-  box-shadow: var(--shadow-soft);
-  margin: 0 auto;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
 }
 
 .slides img.active {
   display: block;
 }
 
-/* Carousel controls */
-.carousel-controls {
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-.carousel-controls .dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 4px;
-  display: inline-block;
+/* Arrow Button Styles */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
   border-radius: 50%;
-  background: var(--color-light-stone);
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 10;
 }
 
-.carousel-controls .dot.active {
-  background: var(--color-primary);
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .carousel-js {
-    max-width: 100%;
-  }
+.carousel-btn--prev {
+  left: 1rem;
 }
 
-@media (min-width: 768px) {
-  .service-detail .container.grid-2-cols {
-    align-items: stretch; /* equalize column heights */
-  }
-  .service-block {
-    height: 100%;
-  }
+.carousel-btn--next {
+  right: 1rem;
 }
 
-
+/* --- Utility --- */
 .section-sub-intro {
     color: var(--color-charcoal); 
 }
