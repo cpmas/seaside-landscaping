@@ -335,6 +335,12 @@ p{margin-bottom:var(--spacing-sm);}
     font-weight: 400;
   }
 
+  /* Add vertical padding to header on mobile */
+  .site-header .header-inner {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .footer-col {
     margin-bottom: var(--spacing-lg);
   }
