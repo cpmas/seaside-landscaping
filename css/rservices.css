@@ -228,3 +228,12 @@ section[aria-labelledby="cta-heading"] .grid-2-cols {
     border-radius: 8px;  /* Optional: adds slightly rounded corners */
     display: block;
 }
+
+@media (max-width: 768px) {
+    
+    .container {
+        max-width: 100%;
+        overflow-x: hidden; 
+    }
+
+}
