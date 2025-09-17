@@ -205,14 +205,57 @@ h1 {
   transform: none; 
 }
 
-/* Images inside cards */
 .service-section .service-card img.card-icon {
-  max-width: 400px; /* smaller than before, keeps cards neat */
+  max-width: 280px; /* Constrain the max width to prevent oversizing */
   width: 100%;
   height: auto;
+  margin-left: auto; /* Add these two lines to center the image */
+  margin-right: auto;
 }
 
 .service-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.12), 0 8px 15px rgba(146,184,189,0.2);
+}
+
+/* --- Responsive Hero Section --- */
+@media (max-width: 768px) {
+  #hero {
+    height: auto; 
+    padding: 4rem 0;
+    text-align: center; 
+  }
+
+    /* Target the image block and move it to the first position */
+  #hero #hero-logo {
+    order: 1;
+  }
+  
+  /* Target the text block and move it to the second position */
+  #hero .grid-2-cols > .fade-in {
+    order: 2; 
+  }
+
+
+  #hero .grid-2-cols {
+    display: flex; 
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #hero .hero-ctas {
+    justify-content: center; 
+  }
+
+  #hero-logo img {
+    height: auto; 
+    max-width: 280px; 
+    margin: 0 auto; 
+  }
+  
+  .home-hero-p {
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

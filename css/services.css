@@ -123,3 +123,38 @@
 .section-sub-intro {
     color: var(--color-charcoal); 
 }
+
+@media (max-width: 768px) {
+  
+  /* --- Stacking for Service Grids --- */
+  /* This rule should already be in your file, it ensures the main sections stack */
+  .grid-2-cols,
+  .grid-2-cols-reverse {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  /* --- Hero Section Text --- */
+  #service-hero h1 {
+    font-size: 2.8rem; /* Make hero title smaller */
+  }
+
+  .service-hero-p {
+    font-size: 1.1rem; /* Adjust hero subtitle */
+  }
+
+  /* --- General Section Headings --- */
+  .heading-serif {
+    font-size: 2.2rem; /* Reduce size of main headings like "Transforming Your Property" */
+  }
+
+  /* --- Center Service Content on Stack --- */
+  .service-content {
+    text-align: center; /* Center the heading, paragraph, and button */
+  }
+
+  .service-content p,
+  .service-content ul {
+    text-align: center; /* Override the desktop 'left' alignment */
+  }
+}
