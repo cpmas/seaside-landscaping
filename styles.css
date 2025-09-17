@@ -302,9 +302,7 @@ p{margin-bottom:var(--spacing-sm);}
 
 /* --- Responsive Styles --- */
 @media(max-width:768px){
-    .dropdown-menu {
-        display: none !important; /* Ensure dropdown is hidden on mobile nav */
-    }
+   
     
     .footer-col {
       margin-bottom: var(--spacing-lg);
