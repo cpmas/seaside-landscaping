@@ -259,3 +259,10 @@ h1 {
     margin-right: auto;
   }
 }
+
+/* --- hide about section on mobile --- */
+@media (max-width: 768px) {
+  .about-intro {
+    display: none;
+  }
+}
