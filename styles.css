@@ -337,8 +337,8 @@ p{margin-bottom:var(--spacing-sm);}
 
   /* Add vertical padding to header on mobile */
   .site-header .header-inner {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
   }
 
   .footer-col {
