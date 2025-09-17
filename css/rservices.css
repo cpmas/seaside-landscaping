@@ -234,6 +234,37 @@ section[aria-labelledby="cta-heading"] .grid-2-cols {
     .container {
         max-width: 100%;
         overflow-x: hidden; 
+        padding: 0 1rem;
     }
 
+}
+
+@media (max-width: 768px) {
+  .service-content h2 {
+    font-size: 1.8rem; /* closer to other pages */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-content h2 {
+    font-size: 1.8rem; /* closer to other pages */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2-cols,
+  .grid-2-cols-reverse {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-image {
+    order: 1;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .service-content {
+    order: 2;
+    text-align: center;
+  }
 }
