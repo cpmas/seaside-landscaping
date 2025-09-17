@@ -412,5 +412,6 @@ p{margin-bottom:var(--spacing-sm);}
     padding: 8px 0; /* Adjust padding for a cleaner look */
     font-size: 0.95rem;
     font-weight: 400;
+    color: var(--color-charcoal);
   }
 }
