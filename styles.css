@@ -260,37 +260,38 @@ p{margin-bottom:var(--spacing-sm);}
     margin-left: 4px;
 }
 
+/* Desktop dropdown */
 .dropdown-menu {
-   
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ffffff;
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    min-width: 240px;
-    border-radius: var(--radius-soft);
-    box-shadow: 0 8px 20px rgba(0,0,0,.15); /* Matched --shadow-hover */
-    z-index: 1000;
-    border: 1px solid #f0f0f0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 240px;
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-soft);
+  z-index: 1000;
+  border: 1px solid #f0f0f0;
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block;
+  display: block; /* desktop hover */
 }
 
 .dropdown-menu li a {
-    padding: 12px 20px;
-    display: block;
-    color: var(--color-charcoal); 
-    white-space: nowrap;
-    font-weight: 500;
+  padding: 12px 20px;
+  display: block;
+  color: var(--color-charcoal); 
+  white-space: nowrap;
+  font-weight: 500;
 }
 
 .dropdown-menu li a:hover {
-    background-color: #f7f7f7;
-    color: var(--color-primary);
+  background-color: #f7f7f7;
+  color: var(--color-primary);
 }
 
 /* --- Utility & Effects --- */
@@ -299,119 +300,86 @@ p{margin-bottom:var(--spacing-sm);}
 .section-sub-intro{color:var(--color-accent);margin-bottom:var(--spacing-lg);}
 .divider{display:flex;justify-content:center;margin:var(--spacing-xl) 0;}
 
-
 /* --- Responsive Styles --- */
 @media(max-width:768px){
-   
-    
-    .footer-col {
-      margin-bottom: var(--spacing-lg);
-    }
-    
-    .footer-logo {
-      width: 9rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .footer-description {
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .footer-col ul {
-      display: inline-block;
-      text-align: left;
-      margin-top: 0;
-    }
-
-    .footer-col:nth-of-type(3) ul,
-    .footer-col:nth-of-type(4) ul {
-      text-align: center;
-    }
-
-    /* --- Reorder Contact Page Columns on Mobile --- */
-.contact-details-col, .contact-form-col {
-    width: 100%; /* Ensure columns take full width when stacked */
-}
-
-/* Use flexbox to reorder the columns */
-.grid-2-cols {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form-col {
-    order: 1; /* Make the form appear first */
-}
-
-.contact-details-col {
-    order: 2; /* Make the details appear second */
-}
-}
-
-@media(prefers-reduced-motion:reduce){
-  *{transition:none!important;animation:none!important;}
-}
-
-/* Style for the mobile dropdown toggle */
-.dropdown.open > a {
-    color: var(--color-primary); /* Highlight the parent link when open */
-}
-
-/* Show the dropdown menu when its parent has the .open class */
-.dropdown.open .dropdown-menu {
-    display: block;
-    position: static; /* Make it part of the normal flow in the mobile nav */
-    box-shadow: none;
-    border: none;
-    background-color: transparent;
-    padding-left: 20px; /* Indent the dropdown items */
-}
-
-.dropdown.open .dropdown-menu li a {
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-@media (max-width: 768px) {
-  /* When the parent dropdown has the 'open' class... */
-  .dropdown.open > a {
-    color: var(--color-primary); /* Keeps the main link highlighted */
+  .dropdown:hover .dropdown-menu {
+    display: none; /* disable hover on mobile */
   }
 
-  .dropdown.open .dropdown-menu {
-    display: block; /* Make the menu visible */
-    max-height: 500px; /* Animate the reveal */
-    opacity: 1;
-  }
-
-  /* Style the dropdown menu for mobile */
   .nav-list .dropdown-menu {
-    /* Reset desktop styles */
     position: relative;
     top: auto;
     left: auto;
     box-shadow: none;
-    background: transparent;
-    
-    /* Hide by default and prepare for transition */
+    background: var(--color-bgww);
+    border-radius: var(--radius-soft);
+    margin-top: var(--spacing-xs);
+    padding-left: var(--spacing-md);
+
     display: none;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+  }
 
-    /* Indent the sub-menu items */
-    padding-left: var(--spacing-md);
-    margin-top: var(--spacing-xs);
+  .dropdown.open .dropdown-menu {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
   }
 
   .nav-list .dropdown-menu li a {
-    padding: 8px 0; /* Adjust padding for a cleaner look */
+    padding: 8px 0;
     font-size: 0.95rem;
     font-weight: 400;
-    color: var(--color-charcoal);
   }
+
+  .footer-col {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .footer-logo {
+    width: 9rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer-description {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer-col ul {
+    display: inline-block;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .footer-col:nth-of-type(3) ul,
+  .footer-col:nth-of-type(4) ul {
+    text-align: center;
+  }
+
+  .contact-details-col, .contact-form-col {
+      width: 100%;
+  }
+
+  .grid-2-cols {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .contact-form-col {
+      order: 1;
+  }
+
+  .contact-details-col {
+      order: 2;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;}
 }
