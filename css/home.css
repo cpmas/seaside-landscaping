@@ -221,8 +221,8 @@ h1 {
 /* --- Responsive Hero Section --- */
 @media (max-width: 768px) {
   #hero {
-    height: auto; 
-    padding: 4rem 0;
+    height: calc(100vh - 72px);
+    padding: 2rem 1rem;
     text-align: center; 
   }
 
