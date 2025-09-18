@@ -14,13 +14,26 @@
     <meta name="description" content="Specialists in retaining walls, natural rock work, and premium turf across Mornington, Mount Martha, Frankston, and beyond. Get a fast quote today.">
     <link rel="canonical" href="https://seasidelandscaping.com.au/">
 
+
     <link rel="preload" href="/styles.css" as="style">
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-   
+    <style>
+    /* Critical styles for hero */
+    body { margin:0; font-family:"Montserrat",sans-serif; background:#fdf7ed; color:#676767; }
+    .site-header { position:sticky; top:0; z-index:1000; background:#fff7eb; }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1rem; }
+    .service-hero { min-height:calc(100vh - 70px); display:flex; justify-content:center; align-items:center; flex-direction:column; text-align:center; background:url("hero.webp") center/cover no-repeat; color:#fff; position:relative; }
+    .service-hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    .service-hero-content { position:relative; z-index:1; }
+    .service-hero-content h1 { font-size:clamp(1.8rem,6vw,2.4rem); margin-bottom:1rem; }
+    .button-primary { background:#92b8bd; color:#fff; padding:0.75rem 1.5rem; border-radius:50px; border:none; cursor:pointer; }
+    </style>
+    <link rel="preload" as="image" href="/assets/icons/logo.png" type="image/png" fetchpriority="high">
+    
    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
     <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
