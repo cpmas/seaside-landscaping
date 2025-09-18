@@ -222,6 +222,7 @@ h1 {
 @media (max-width: 768px) {
   #hero {
     height: calc(100vh - 72px);
+    height: calc(100dvh - 72px); 
     padding: 2rem 1rem;
     text-align: center; 
   }
