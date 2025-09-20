@@ -16,7 +16,8 @@
 
 
     <link rel="preload" href="/styles.css" as="style">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/styles.css"></noscript>
     <link rel="preload" as="font" href="/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2" type="font/woff2" crossorigin>
 
 
@@ -26,9 +27,7 @@
     .site-header { position:sticky; top:0; z-index:1000; background:#fff7eb; }
     .header-inner { display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1rem; }
     .button-primary { background:#92b8bd; color:#fff; padding:0.75rem 1.5rem; border-radius:50px; border:none; cursor:pointer; }
-    /* Montserrat Black (900) */
-    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 900;  src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2') format('woff2'); }
-
+    
     /* Rest of styles */
     #hero { height: calc(100vh - 72px); display: flex; justify-content: center; align-items: center; background-color: var(--color-canvas); }
     #hero .hero-title { font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 3.7rem; }
