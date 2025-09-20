@@ -69,13 +69,13 @@ p{margin-bottom:var(--spacing-sm);}
 @font-face { font-family: 'Montserrat'; font-style: normal; font-display: swap; font-weight: 500; src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-500.woff2') format('woff2'); }
 
 /* Montserrat SemiBold (600) */
-@font-face { font-family: 'Montserrat'; font-style: normal; font-display: block; font-weight: 600; src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-600.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-display: swap; font-weight: 600; src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-600.woff2') format('woff2'); }
 
 /* Montserrat Bold (700) */
 @font-face { font-family: 'Montserrat'; font-style: normal; font-display: swap; font-weight: 700;  src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-700.woff2') format('woff2'); }
 
 /* Montserrat Black (900) */
-@font-face { font-family: 'Montserrat'; font-style: normal; font-display: swap; font-weight: 900;  src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 900;  src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2') format('woff2'); }
 
 /* cormorant-garamond-600 - latin */
 @font-face { font-display: swap; font-family: 'Cormorant Garamond'; font-display: swap; font-style: normal; font-weight: 600; src: url('/fonts/cormorant-garamond-v21-latin/cormorant-garamond-v21-latin-600.woff2') format('woff2'); }
