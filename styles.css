@@ -413,3 +413,12 @@ p{margin-bottom:var(--spacing-sm);}
   *{transition:none!important;animation:none!important;}
 }
 
+.value-icon {
+  display: inline-block;
+  vertical-align: middle;   
+  width: 4em;               
+  height: 4em;
+  color: var(--color-accent); 
+  fill: currentColor;       
+  margin-bottom: 1.5rem;    
+}
