@@ -28,11 +28,11 @@
 #cta-form select,
 #cta-form textarea {
     width: 100%;
-    padding: 0.8rem var(--spacing-sm); /* UPDATED: Reduced padding */
+    padding: 0.8rem var(--spacing-sm); 
     border: 1px solid #ddd;
     border-radius: 8px; 
-    font-family: var(--font-sans);
-    font-size: 0.9rem; /* UPDATED: Slightly smaller font */
+    font-family: font-family: "Montserrat", sans-serif;;
+    font-size: 0.9rem; 
     background-color: #fff;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
