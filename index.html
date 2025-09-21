@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TC2JQ2CZ');</script>
-    <!-- End Google Tag Manager -->
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seaside Landscaping | Landscaping on the Mornington Peninsula</title>
@@ -174,10 +168,7 @@
     </script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TC2JQ2CZ"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+
     <header class="site-header" role="banner">
     <div class="container header-inner">
         <a href="/" class="logo-link" aria-label="Seaside Landscaping Home">
@@ -403,6 +394,34 @@
     </script>
 
     <script src="/main.js" defer></script>
+    <script>
+      const loadGTM = () => {
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TC2JQ2CZ';
+        script.async = true;
+        document.head.appendChild(script);
+
+        const noscript = document.createElement('noscript');
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-TC2JQ2CZ';
+        iframe.height = '0';
+        iframe.width = '0';
+        iframe.style.display = 'none';
+        iframe.style.visibility = 'hidden';
+        noscript.appendChild(iframe);
+        document.body.insertAdjacentElement('afterbegin', noscript);
+
+        // Clean up the event listeners after GTM is loaded
+        window.removeEventListener('scroll', loadGTM);
+        window.removeEventListener('mousemove', loadGTM);
+        window.removeEventListener('touchstart', loadGTM);
+      };
+
+      // Listen for the first user interaction to load GTM
+      window.addEventListener('scroll', loadGTM, { once: true });
+      window.addEventListener('mousemove', loadGTM, { once: true });
+      window.addEventListener('touchstart', loadGTM, { once: true });
+      </script>
 </body>
 
 </html>
