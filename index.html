@@ -19,9 +19,7 @@
     <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/styles.css"></noscript>
     <link rel="preload" as="font" href="/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/home.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/home.css"></noscript>
-    
+
     <style>
       /* --- CRITICAL CSS FOR ABOVE-THE-FOLD CONTENT --- */
 
@@ -41,14 +39,13 @@
       /* Base typography */
       h1 { font-family: "Montserrat", sans-serif; line-height: 1.2; margin-bottom: var(--spacing-md); color: var(--color-accent); font-size: 4.2rem; }
       p { margin-bottom: var(--spacing-sm); }
-
+      
       /* Header styles */
       .site-header { position: sticky; top: 0; z-index: 1000; background: var(--color-canvas); }
       .header-inner { display: flex; align-items: center; justify-content: space-between; padding: var(--spacing-sm) var(--spacing-md); }
       .logo-link { display: flex; align-items: center; gap: var(--spacing-sm); color: var(--color-accent); }
-      /* Montserrat Black (900) */
       @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 900;  src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2') format('woff2'); }
-
+      
       /* Hero section styles */
       #hero { height: calc(100vh - 72px); display: flex; justify-content: center; align-items: center; background-color: var(--color-canvas); }
       .hero-title { font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 3.7rem; }
@@ -75,7 +72,50 @@
         .home-hero-p { width: 100%; margin-left: auto; margin-right: auto; }
       }
     </style>
+    <style>
+    /* Critical styles for hero */
+    body { margin:0; font-family:"Montserrat",sans-serif; background:#fdf7ed; color:#676767; }
+    .site-header { position:sticky; top:0; z-index:1000; background:#fff7eb; }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1rem; }
+    .button-primary { background:#92b8bd; color:#fff; padding:0.75rem 1.5rem; border-radius:50px; border:none; cursor:pointer; }
     
+    /* Rest of styles */
+    #hero { height: calc(100vh - 72px); display: flex; justify-content: center; align-items: center; background-color: var(--color-canvas); }
+    #hero .hero-title { font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 3.7rem; }
+    .hero-ctas { display: flex; justify-content: flex-start; align-items: center; padding: 0; }
+    .hero-ctas a { margin-left: 0; }
+    #hero-logo { display: flex; justify-content: center; align-items: center; height: 100%; }
+    #hero-logo img { height: 33rem; width: auto; }
+    .hero-gradient { color: var(--color-primary); }
+    h1 { font-size: 4.2rem; }
+    .home-hero-p { font-family: "Montserrat", sans-serif; font-size: 1.1rem; font-weight: 500; color: var(--color-charcoal); width: 90%; margin-top: }
+    .service-highlights { background-color: var(--color-canvas); }
+    #ctal { margin-top: -1.5rem; margin-bottom: 1rem; }
+    .about-grid { display: grid; grid-template-columns: 2.2fr 1.8fr; gap: 1rem; align-items: start; }
+    .about-col-left h2 { margin: 0; }
+    .about-col-right { display: flex; flex-direction: column; align-items: flex-start; }
+    .about-col-right p { margin-bottom: var(--spacing-md); line-height: 1.7; }
+    .about-col-right .button { margin-top: var(--spacing-md); align-self: center; }
+    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+    .grid-services { display: grid; grid-template-columns: 1fr; gap: var(--spacing-xl); text-align: center; }
+    @media (max-width: 768px) { .service-section .service-card { flex-direction: column; align-items: center; text-align: center; } .service-section .service-card img.card-icon { margin: 0 auto var(--spacing-md); display: block; } }
+    @media (min-width: 768px) { .grid-services { grid-template-columns: repeat(2, 1fr); flex-direction: column; align-items: center; text-align: center; } .service-section .service-card img.card-icon { margin: 0 auto var(--spacing-md); display: block; } }
+    @media (min-width: 1200px) { .grid-services { grid-template-columns: repeat(4, 1fr); } }
+    .service-section .container { max-width: 1400px; }
+    .service-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit; transition: transform 0.3s, box-shadow 0.3s; }
+    .service-item:hover { transform: translateY(-6px); }
+    .service-item img { width: 100%; max-width: 280px; height: auto; border-radius: var(--radius-soft); box-shadow: var(--shadow-soft); margin-bottom: var(--spacing-md); object-fit: cover; }
+    .service-card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
+    .service-card { border-radius: 30px; }
+    .service-card p { font-size: 1rem; line-height: 1.6; color: var(--color-charcoal); margin-bottom: var(--spacing-sm); }
+    .service-item .learn-more { font-weight: 600; color: var(--color-charcoal); }
+    .service-section .service-card { padding: var(--spacing-md); transform: none; }
+    .service-section .service-card img.card-icon { max-width: 280px; width: 100%; height: auto; margin-left: auto; margin-right: auto; }
+    .service-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 12px 30px rgba(0,0,0,0.12), 0 8px 15px rgba(146,184,189,0.2); }
+    @media (max-width: 768px) { #hero { height: calc(100vh - 100px); padding: 2rem 1rem; text-align: center; } #hero #hero-logo { order: 1; } #hero .grid-2-cols > .fade-in { order: 2; } #hero .grid-2-cols { display: flex; flex-direction: column; gap: 2rem; } #hero .hero-ctas { justify-content: center; } #hero-logo img { height: auto; max-width: 280px; margin: 0 auto; } .home-hero-p { width: 100%; margin-left: auto; margin-right: auto; } }
+    @media (max-width: 768px) { .about-intro { display: none; } #hero-logo img { display: none; } }
+
+    </style>
     <link rel="preload" as="image" href="/assets/icons/logo.png" type="image/png" fetchpriority="high">
     
    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
