@@ -158,3 +158,24 @@
     text-align: center; /* Override the desktop 'left' alignment */
   }
 }
+
+#service-hero {
+  position: relative; /* Required for positioning the image */
+  overflow: hidden;
+}
+
+.service-hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the image cover the area like background-size: cover */
+  z-index: -1; /* Pushes the image behind the content */
+}
+
+/* This keeps the text and overlay visible */
+.service-hero-content {
+  position: relative;
+  z-index: 1;
+}
