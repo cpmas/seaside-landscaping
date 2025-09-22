@@ -179,3 +179,9 @@
   position: relative;
   z-index: 1;
 }
+
+.carousel-btn svg {
+  fill: currentColor;
+  width: 1.2rem;  /* Match the old font-size for consistent sizing */
+  height: 1.2rem; /* Match the old font-size for consistent sizing */
+}
