@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/css/services.css"> 
     <link rel="preload" as="font" href="/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="/assets/images/services/turf/hero.jpg">
 
     <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
@@ -52,7 +53,12 @@
 </header>
 
     <main>
-        <section id="service-hero" style="background-image: url('/assets/images/services/turf/hero.jpg');">
+        <section id="service-hero" >
+            <img src="/assets/images/services/turf/hero.jpg" 
+                alt="Lush green instant turf professionally installed in a backyard" 
+                class="service-hero-image"
+                loading="eager"
+                fetchpriority="high">
             <div class="service-hero-content">
                 <div class="container text-center">
                     <h1 class="hero-title hero-gradient">Premium Turfing Services</h1>
