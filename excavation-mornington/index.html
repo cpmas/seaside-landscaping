@@ -7,12 +7,11 @@
     <meta name="description" content="Professional excavation, site cuts, leveling, and earthworks on the Mornington Peninsula. Precision preparation for landscaping, retaining walls and turf.">
     <link rel="canonical" href="https://seasidelandscaping.com.au/excavation-mornington/">
 
+    <link rel="preload" href="/styles.css" as="style"> 
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/rservices.css"> 
-    <link rel="stylesheet" href="/css/forms.css">
-    <link rel="stylesheet" href="/css/fonts.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/css/services.css"> 
     <link rel="preload" as="font" href="/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="/assets/images/services/excavation/cut.jpg">
 
     <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
@@ -53,7 +52,12 @@
 </header>
 
     <main>
-        <section id="service-hero" style="background-image: url('/assets/images/services/excavation/cut.jpg');">
+        <section id="service-hero" >
+            <img src="/assets/images/services/excavation/cut.jpg" 
+            alt="An Excavation project" 
+            class="service-hero-image"
+            loading="eager"
+            fetchpriority="high">
             <div class="service-hero-content">
                 <div class="container text-center">
                     <h1 class="hero-title hero-gradient">Excavation & Earthworks</h1>
@@ -91,9 +95,15 @@
                         <h3>Site Cuts & Levelling</h3>
                         <p>We create perfectly level and stable platforms for sheds, driveways, turf installation, and entertainment areas. Using laser-level technology, we ensure your base is level and graded accurately, preventing future issues with drainage or stability.</p>
                         <ul>
-                            <li><i class="fa-solid fa-circle-check"></i> Shed & Water Tank Pads</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Driveway & Pathway Preparation</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Bulk Soil Removal & Spreading</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Shed & Water Tank Pads</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Driveway & Pathway Preparation</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Soil Removal & Spreading</li>
                         </ul>
                     </div>
                 </div>
@@ -106,9 +116,15 @@
                         <h3>Preparation for Walls & Turf</h3>
                         <p>The success of a new retaining wall or lawn depends entirely on the work done in preperation. We specialise in excavating and preparing sites to ensure a perfect foundation for these key landscaping features, guaranteeing stability for walls and promoting healthy, lush growth for turf.</p>
                         <ul>
-                             <li><i class="fa-solid fa-circle-check"></i> Solid footings for retaining walls</li>
-                             <li><i class="fa-solid fa-circle-check"></i> Site clearing for new lawn areas</li>
-                             <li><i class="fa-solid fa-circle-check"></i> Soil removal & turf underlay prep</li>
+                             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Solid footings for retaining walls</li>
+                             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Site clearing for new lawn areas</li>
+                             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Soil removal & turf underlay prep</li>
                         </ul>
                     </div>
                 </div>

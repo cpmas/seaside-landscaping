@@ -7,13 +7,11 @@
     <meta name="description" content="Professional landscape construction services on the Mornington Peninsula. We specialise in rock walls, feature fencing, corten steel garden edging, and pathways.">
     <link rel="canonical" href="https://seasidelandscaping.com.au/landscapes/">
 
+    <link rel="preload" href="/styles.css" as="style"> 
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/rservices.css"> 
     <link rel="stylesheet" href="/css/services.css"> 
-    <link rel="stylesheet" href="/css/forms.css">
-    <link rel="stylesheet" href="/css/fonts.css" media="print" onload="this.media='all'">
     <link rel="preload" as="font" href="/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="/assets/images/services/IMG_1022.jpg">
 
     <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
@@ -54,7 +52,12 @@
 </header>
 
     <main>
-        <section id="service-hero" style="background-image: url('/assets/images/services/IMG_1022.jpg');">
+        <section id="service-hero">
+            <img src="/assets/images/services/IMG_1022.jpg" 
+                alt="A professionally constructed landscape with a natural steps and a stone stepper path" 
+                class="service-hero-image"
+                loading="eager"
+                fetchpriority="high">
             <div class="service-hero-content">
                 <div class="container text-center">
                     <h1 class="hero-title hero-gradient">Landscaping</h1>
@@ -92,9 +95,15 @@
                         <h3>Natural Rock Walls</h3>
                         <p>Using locally sourced stone, we build robust and beautiful rock walls that add a timeless, natural appeal to any landscape. Perfect for creating garden tiers, retaining sloped land, or as a stunning standalone feature, our rock walls are constructed with an expert eye for detail and stability.</p>
                         <ul>
-                            <li><i class="fa-solid fa-circle-check"></i> Retaining and feature walls</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Garden tiers and terracing</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Durable and natural aesthetic</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Retaining and feature walls</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Garden tiers and terracing</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Durable and natural aesthetic</li>
                         </ul>
                     </div>
                 </div>
@@ -108,9 +117,15 @@
                         <h3>Feature & Batten Fencing</h3>
                         <p>More than just a boundary, a feature fence adds architectural style and privacy to your property. We specialise in modern batten fencing and other custom designs that act as a stylish backdrop for your garden or a standout feature for your home's facade, built with quality materials for longevity.</p>
                         <ul>
-                             <li><i class="fa-solid fa-circle-check"></i> Modern privacy screens</li>
-                             <li><i class="fa-solid fa-circle-check"></i> Timber batten fencing</li>
-                             <li><i class="fa-solid fa-circle-check"></i> Custom feature designs</li>
+                             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Modern privacy screens</li>
+                             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Timber batten fencing</li>
+                             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Custom feature designs</li>
                         </ul>
                     </div>
                 </div>
@@ -123,9 +138,15 @@
                         <h3>Steel Garden Edging</h3>
                         <p>For a clean, contemporary finish, nothing beats steel edging. We install durable steel borders to define garden beds, contain pathways, and create sharp, clean lines between lawn and garden areas, preventing mulch or toppings from spilling over.</p>
                         <ul>
-                             <li><i class="fa-solid fa-circle-check"></i> Defines garden beds and paths</li>
-                             <li><i class="fa-solid fa-circle-check"></i> Creates a sharp, modern look</li>
-                             <li><i class="fa-solid fa-circle-check"></i> Durable and long-lasting</li>
+                             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Defines garden beds and paths</li>
+                             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Creates a sharp, modern look</li>
+                             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Durable and long-lasting</li>
                         </ul>
                     </div>
                 </div>
@@ -138,9 +159,15 @@
                         <h3>Paths & Toppings</h3>
                         <p>We supply and install a range of decorative and practical toppings for driveways, paths, and entertainment areas. Options like crushed rock or decorative gravel create durable, low-maintenance surfaces that complement your home and garden.</p>
                         <ul>
-                            <li><i class="fa-solid fa-circle-check"></i> Driveways and crossover paths</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Crushed rock and gravel surfaces</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Low-maintenance and practical</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Driveways and crossover paths</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Crushed rock and gravel surfaces</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon" aria-hidden="true">
+                                <path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM227.3 387.3l184-184c6.2-6.2 6.2-16.4 0-22.6l-22.6-22.6c-6.2-6.2-16.4-6.2-22.6 0L216 308.1l-70.1-70.1c-6.2-6.2-16.4-6.2-22.6 0l-22.6 22.6c-6.2 6.2-6.2 16.4 0 22.6l104 104c6.2 6.2 16.4 6.2 22.6 0z"/>
+                            </svg> Low-maintenance and practical</li>
                         </ul>
                     </div>
                 </div>
