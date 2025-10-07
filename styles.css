@@ -522,3 +522,20 @@ p{margin-bottom:var(--spacing-sm);}
   /* cormorant-garamond-700 - latin */
   @font-face { font-display: swap; font-family: 'Cormorant Garamond'; font-display: swap;font-style: normal; font-weight: 700; src: url('/fonts/cormorant-garamond-v21-latin/cormorant-garamond-v21-latin-700.woff2') format('woff2'); }
 
+.about-feature-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-soft); 
+  box-shadow: var(--shadow-soft);  
+  object-fit: cover;
+  max-height: 550px; 
+  aspect-ratio: 4 / 5; /
+}
+
+@media (max-width: 768px) {
+  .about-feature-image {
+    max-height: 400px; 
+    aspect-ratio: 1 / 1; /
+  }
+}
