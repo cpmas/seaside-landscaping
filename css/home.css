@@ -4,19 +4,24 @@
 #hero-blend {
     position: relative;
     height: calc(100vh - 72px);
-    min-height: 600px; 
+    min-height: 600px;
     width: 100%;
-    
-    /* Image Settings */
-    background-image: url('/assets/images/services/rockw/test.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 40% center;
-    
-    /* Flex alignment: Pushes content to the LEFT */
+    /* REMOVE all background-image lines from here */
     display: flex;
     align-items: center; 
-    justify-content: flex-start; 
+    justify-content: flex-start;
+    overflow: hidden; /* Ensures image doesn't spill out */
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes it behave exactly like background-size: cover */
+    object-position: 40% center; /* Matches your old background-position */
+    z-index: 0; /* Sits at the bottom */
 }
 
 /* The Gradient Overlay */
@@ -154,6 +159,9 @@
         
         /* Center the image focus on mobile */
         background-position: 65% bottom;
+    }
+    .hero-bg-img {
+        object-position: 65% bottom; /* Matches your old mobile background-position */
     }
 
     .hero-blend-overlay {
