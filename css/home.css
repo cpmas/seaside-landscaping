@@ -1,62 +1,226 @@
+/* --- BLENDED HERO REDESIGN (Refined v2) --- */
 
-#hero {
+/* Container for the hero */
+#hero-blend {
+    position: relative;
     height: calc(100vh - 72px);
+    min-height: 600px; 
+    width: 100%;
+    
+    /* Image Settings */
+    background-image: url('/assets/images/services/rockw/test.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40% center;
+    
+    /* Flex alignment: Pushes content to the LEFT */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-canvas);
+    align-items: center; 
+    justify-content: flex-start; 
 }
 
-#hero .hero-title{
+/* The Gradient Overlay */
+.hero-blend-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    
+    /* DESKTOP GRADIENT (Tightened):
+       - 0% to ~10%: Solid Cream
+       - 10% to 55%: Fades to transparent
+    */
+    background: linear-gradient(
+        90deg, 
+        var(--color-canvas) 0%, 
+        var(--color-canvas) 0%, 
+        rgba(253, 247, 237, 0.75) 40%, 
+        rgba(253, 247, 237, 0) 75%
+    );
+}
+
+/* Content Container */
+/* Content Container */
+.hero-blend-content {
+    position: relative;
+    z-index: 2; 
+   
+
+   
+
+    padding: 2.5rem;
+    
+    /* Center the text block within the left half */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+@media (min-width: 993px) {
+  .hero-blend-content {
+    margin-left: 7%;
+}
+
+ 
+  /* Content Container */
+.hero-blend-content {
+    position: relative;
+    z-index: 2; 
+ 
+   
+
+    padding: 2.5rem 4rem;
+    
+    /* Center the text block within the left half */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+}
+
+@media (max-width: 992px) {
+  .hero-blend-content {
+    margin-bottom: -10%;
+}
+
+  #hero-blend {
+    margin-bottom: 10%;
+  }
+
+ 
+}
+
+/* Wrapper to constrain text width and keep it left-aligned */
+.hero-blend-content > * {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Typography */
+
+
+.hero-title {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
-    font-size: 3.7rem;
+    font-size: clamp(2.7rem, 4.5vw, 3.8rem); 
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+    width: 100%;
 }
 
-.hero-ctas {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center; /* optional, for vertical alignment */
-  padding: 0; /* remove any unwanted padding */
-}
-
-.hero-ctas a {
-  margin-left: 0;
-}
-
-#hero-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* optional, ensures vertical centering if parent has height */
-}
-
-#hero-logo img { 
-    height: 33rem;
-    width: auto;
+#hero-blend .hero-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
 }
 
 .hero-gradient {
-    color: var(--color-primary);
+    color: var(--color-primary); 
+    font-style: italic;
 }
 
-h1 {
-    
-    font-size: 4.2rem;
-}
-
-.home-hero-p {
+.hero-p {
     font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-charcoal);
-    width: 90%;
-    margin-top: 
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+/* Buttons */
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* --- MOBILE & TABLET RESPONSIVENESS (Max Width 992px) --- */
+@media (max-width: 992px) {
+    #hero-blend {
+        /* Center everything */
+        align-items: center; 
+        justify-content: center;
+        text-align: center;
+        
+        height: auto;
+        min-height: 600px;
+        padding: 4rem 0;
+        
+        /* Center the image focus on mobile */
+        background-position: 65% bottom;
+    }
+
+    .hero-blend-overlay {
+        /* Mobile Gradient */
+        background: linear-gradient(
+            180deg, 
+            rgba(253, 247, 237, 0.3) 0%, 
+            rgba(253, 247, 237, 0.5) 50%, 
+            var(--color-canvas) 90%
+        );
+    }
+
+    .hero-blend-content {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: 90%; 
+        padding: 0 1rem;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-blend-content > * {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 3rem; 
+        margin-bottom: 1rem;
+        text-align: center;
+        
+        color: #5b8863;
+        
+        text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-gradient {
+    color: rgb(241, 237, 227);
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+    .hero-p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.15rem;
+        margin-bottom: 2rem;
+        color: rgb(79, 79, 79);
+        font-weight: 500; 
+    }
+
+    .hero-ctas {
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 
+/* --- REST OF SITE STYLES (Preserved) --- */
+
 .service-highlights {
-  /*background-color: rgb(145, 183, 189, 0.15);*/
   background-color: var(--color-canvas);
 }
 
@@ -65,9 +229,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
-
 /* --- about section --- */
-
 .about-grid {
   display: grid;
   grid-template-columns: 2.2fr 1.8fr; 
@@ -84,7 +246,6 @@ h1 {
   flex-direction: column;
   align-items: flex-start; 
 }
-
 
 .about-col-right p {
   margin-bottom: var(--spacing-md);
@@ -103,22 +264,19 @@ h1 {
   }
 }
 
-
 /* --- Services --- */
-
-/* Services Grid */
 .grid-services {
   display: grid;
-  grid-template-columns: 1fr; /* default: mobile single column */
+  grid-template-columns: 1fr;
   gap: var(--spacing-xl);
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .service-section .service-card {
-    flex-direction: column;       /* stack image above text */
-    align-items: center;          
-    text-align: center;           
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .service-section .service-card img.card-icon {
@@ -129,10 +287,10 @@ h1 {
 
 @media (min-width: 768px) {
   .grid-services {
-    grid-template-columns: repeat(2, 1fr); /* 2x2 on tablets */
-    flex-direction: column;      
-    align-items: center;      
-    text-align: center;         
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .service-section .service-card img.card-icon {
@@ -143,12 +301,12 @@ h1 {
 
 @media (min-width: 1200px) {
   .grid-services {
-    grid-template-columns: repeat(4, 1fr); /* 4 across on large screens */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .service-section .container {
-  max-width: 1400px; /* wider than default 1250px */
+  max-width: 1400px;
 }
 
 /* Service block */
@@ -168,7 +326,7 @@ h1 {
 /* Service images */
 .service-item img {
   width: 100%;
-  max-width: 280px;   /* keeps them consistent but not huge */
+  max-width: 280px;
   height: auto;
   border-radius: var(--radius-soft);
   box-shadow: var(--shadow-soft);
@@ -206,10 +364,10 @@ h1 {
 }
 
 .service-section .service-card img.card-icon {
-  max-width: 280px; /* Constrain the max width to prevent oversizing */
+  max-width: 280px;
   width: 100%;
   height: auto;
-  margin-left: auto; /* Add these two lines to center the image */
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -218,54 +376,261 @@ h1 {
   box-shadow: 0 12px 30px rgba(0,0,0,0.12), 0 8px 15px rgba(146,184,189,0.2);
 }
 
-/* --- Responsive Hero Section --- */
+/* --- hide about section on mobile --- */
 @media (max-width: 768px) {
-  #hero {
-    height: calc(100vh - 72px); 
-    padding: 2rem 1rem;
-    text-align: center; 
-  }
-
-    /* Target the image block and move it to the first position */
-  #hero #hero-logo {
-    order: 1;
-  }
-  
-  /* Target the text block and move it to the second position */
-  #hero .grid-2-cols > .fade-in {
-    order: 2; 
-  }
-
-
-  #hero .grid-2-cols {
-    display: flex; 
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  #hero .hero-ctas {
-    justify-content: center; 
-  }
-
-  #hero-logo img {
-    height: auto; 
-    max-width: 280px; 
-    margin: 0 auto; 
-  }
-  
-  .home-hero-p {
-    width: 100%; 
-    margin-left: auto;
-    margin-right: auto;
+  .about-intro {
+    
   }
 }
 
-/* --- hide about section on mo --- */
-@media (max-width: 768px) {
-  .about-intro {
+
+
+
+
+
+
+/* --- Google Reviews Section --- */
+
+.reviews-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Aligns Nav to bottom of text */
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.reviews-header-text {
+    text-align: left; /* Left align the heading */
+  
+}
+
+/* Ensure title doesn't have huge bottom margin so it sits tight with badge */
+#reviews-heading {
+    margin-bottom: 0.8rem;
+}
+
+.google-rating-badge {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Left align rating */
+    gap: 0.8rem;
+    color: var(--color-charcoal);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+/* New CSS for inline SVGs */
+.stars-svg svg {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+.google-g-logo {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.card-g-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Reviews Track styling */
+.reviews-slider-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 2rem; 
+    padding-top: 0.5rem;
+    padding-left: 2px; /* Prevent shadow cut-off on first card */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.reviews-track::-webkit-scrollbar {
     display: none;
-  }
-  #hero-logo img {
-    display: none;
-  }
+}
+
+.review-card {
+    flex: 0 0 320px;
+    background: #fff;
+    border-radius: var(--radius-soft);
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.reviewer-info {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #202124;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #70757a;
+}
+
+.review-stars {
+    color: #fbbc04;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.review-body {
+    font-size: 0.95rem;
+    color: #4b4b4b;
+    line-height: 1.5;
+}
+
+/* Text Truncation */
+.review-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.review-body.expanded p {
+    display: block;
+    -webkit-line-clamp: unset;
+}
+
+.read-more-btn {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    background: none;
+    border: none;
+    color: #70757a;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+    color: #202124;
+}
+
+/* Nav Button Styles */
+.reviews-nav-container {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.review-nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.review-nav:hover {
+    background: #f1f3f4;
+}
+
+.review-nav svg {
+    width: 12px;
+    fill: #5f6368;
+}
+
+/* ... existing desktop styles ... */
+/* Mobile Responsive Adjustments */
+@media (max-width: 992px) {
+    /* Stack the header and center everything */
+    .reviews-section-header {
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    /* Override left alignment for text wrapper */
+    .reviews-header-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Center the rating badge flex container */
+    .google-rating-badge {
+        justify-content: center;
+    }
+    
+    /* Show and center arrows on mobile */
+    .reviews-nav-container {
+        display: flex; 
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Make cards slightly smaller for mobile screens */
+    .review-card {
+        flex: 0 0 280px; 
+    }
+
+
+
+    #about-heading {
+        text-align: center;
+    }
+
+    .about-lead {
+        text-align: center; !important
+    }
+    
 }

@@ -1,124 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seaside Landscaping | Landscaping on the Mornington Peninsula</title>
     <meta name="description" content="Specialists in retaining walls, natural rock work, and premium turf across Mornington, Mount Martha, Frankston, and beyond. Get a fast quote today.">
     <link rel="canonical" href="https://seasidelandscaping.com.au/">
 
-
     <link rel="preload" href="/styles.css" as="style"> 
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="preload" as="font" href="/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2" type="font/woff2" crossorigin>
-    <style>
-      /* --- CRITICAL CSS FOR ABOVE-THE-FOLD CONTENT --- */
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/assets/images/services/rockw/test.png" fetchpriority="high">
 
-      /* Root variables required for colors & spacing */
-      :root { --color-primary: #92b8bd; --color-accent: #5d7b62; --color-canvas: #fdf7ed; --color-charcoal: #676767; --color-bgw: #fcf7ed; --spacing-sm: 1rem; --spacing-md: 1.5rem; --spacing-lg: 2rem; --spacing-xl: 3rem; --container-max: 1250px; }
-
-      /* Base reset and body styles */
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: "Montserrat", sans-serif; line-height: 1.6; color: var(--color-charcoal); background: var(--color-canvas); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-      a { color: var(--color-accent); text-decoration: none; }
-      img { max-width: 100%; height: auto; display: block; }
-      
-      /* Layout helpers */
-      .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--spacing-md); }
-      .grid-2-cols { display: grid; grid-template-columns: repeat(auto-fit,minmax(30rem,1fr)); gap: var(--spacing-xl); align-items: center; }
-
-      /* Base typography */
-      h1 { font-family: "Montserrat", sans-serif; line-height: 1.2; margin-bottom: var(--spacing-md); color: var(--color-accent); font-size: 4.2rem; }
-      p { margin-bottom: var(--spacing-sm); }
-      
-      /* Header styles */
-      .site-header { position: sticky; top: 0; z-index: 1000; background: var(--color-canvas); }
-      .header-inner { display: flex; align-items: center; justify-content: space-between; padding: var(--spacing-sm) var(--spacing-md); }
-      .logo-link { display: flex; align-items: center; gap: var(--spacing-sm); color: var(--color-accent); }
-      @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 900; font-display: swap;  src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2') format('woff2'); }
-
-      /* Hero section styles */
-      #hero { height: calc(100vh - 72px); display: flex; justify-content: center; align-items: center; background-color: var(--color-canvas); }
-      .hero-title { font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 3.7rem; }
-      .hero-gradient { color: var(--color-primary); }
-      .home-hero-p { font-family: "Montserrat", sans-serif; font-size: 1.1rem; font-weight: 500; color: var(--color-charcoal); width: 90%; }
-      .hero-ctas { display: flex; justify-content: flex-start; align-items: center; padding: 0; }
-      #hero-logo { display: flex; justify-content: center; align-items: center; height: 100%; }
-      #hero-logo img { height: 33rem; width: auto; }
-
-      /* Button styles */
-      .button { display: inline-block; padding: var(--spacing-sm) var(--spacing-lg); border-radius: 50px; font-weight: 600; text-align: center; }
-      .button-primary { background: var(--color-primary); color: var(--color-bgw); border: 3px solid var(--color-primary); }
-      .button-large { padding: var(--spacing-md) var(--spacing-xl); }
-
-      /* Mobile responsive styles for above-the-fold */
-      @media (max-width: 768px) {
-        .site-header .header-inner { padding-top: 0.68rem; padding-bottom: 0.68rem; }
-        #hero { height: calc(100vh - 100px); padding: 2rem 1rem; text-align: center; }
-        #hero .grid-2-cols { display: flex; flex-direction: column; gap: 2rem; }
-        #hero #hero-logo { order: 1; }
-        #hero .grid-2-cols > .fade-in { order: 2; }
-        #hero .hero-ctas { justify-content: center; }
-        #hero-logo img { display: none; }
-        .home-hero-p { width: 100%; margin-left: auto; margin-right: auto; }
-      }
-    </style>
-    <style>
-    /* Critical styles for hero */
-    body { margin:0; font-family:"Montserrat",sans-serif; background:#fdf7ed; color:#676767; }
-    .site-header { position:sticky; top:0; z-index:1000; background:#fff7eb; }
-    .header-inner { display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1rem; }
-    .button-primary { background:#92b8bd; color:#fff; padding:0.75rem 1.5rem; border-radius:50px; border:none; cursor:pointer; }
-    
-    /* Rest of styles */
-    #hero { height: calc(100vh - 72px); display: flex; justify-content: center; align-items: center; background-color: var(--color-canvas); }
-    #hero .hero-title { font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 3.7rem; }
-    .hero-ctas { display: flex; justify-content: flex-start; align-items: center; padding: 0; }
-    .hero-ctas a { margin-left: 0; }
-    #hero-logo { display: flex; justify-content: center; align-items: center; height: 100%; }
-    #hero-logo img { height: 33rem; width: auto; }
-    .hero-gradient { color: var(--color-primary); }
-    h1 { font-size: 4.2rem; }
-    .home-hero-p { font-family: "Montserrat", sans-serif; font-size: 1.1rem; font-weight: 500; color: var(--color-charcoal); width: 90%; margin-top: }
-    .service-highlights { background-color: var(--color-canvas); }
-    #ctal { margin-top: -1.5rem; margin-bottom: 1rem; }
-    .about-grid { display: grid; grid-template-columns: 2.2fr 1.8fr; gap: 1rem; align-items: start; }
-    .about-col-left h2 { margin: 0; }
-    .about-col-right { display: flex; flex-direction: column; align-items: flex-start; }
-    .about-col-right p { margin-bottom: var(--spacing-md); line-height: 1.7; }
-    .about-col-right .button { margin-top: var(--spacing-md); align-self: center; }
-    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
-    .grid-services { display: grid; grid-template-columns: 1fr; gap: var(--spacing-xl); text-align: center; }
-    @media (max-width: 768px) { .service-section .service-card { flex-direction: column; align-items: center; text-align: center; } .service-section .service-card img.card-icon { margin: 0 auto var(--spacing-md); display: block; } }
-    @media (min-width: 768px) { .grid-services { grid-template-columns: repeat(2, 1fr); flex-direction: column; align-items: center; text-align: center; } .service-section .service-card img.card-icon { margin: 0 auto var(--spacing-md); display: block; } }
-    @media (min-width: 1200px) { .grid-services { grid-template-columns: repeat(4, 1fr); } }
-    .service-section .container { max-width: 1400px; }
-    .service-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit; transition: transform 0.3s, box-shadow 0.3s; }
-    .service-item:hover { transform: translateY(-6px); }
-    .service-item img { width: 100%; max-width: 280px; height: auto; border-radius: var(--radius-soft); box-shadow: var(--shadow-soft); margin-bottom: var(--spacing-md); object-fit: cover; }
-    .service-card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
-    .service-card { border-radius: 30px; }
-    .service-card p { font-size: 1rem; line-height: 1.6; color: var(--color-charcoal); margin-bottom: var(--spacing-sm); }
-    .service-item .learn-more { font-weight: 600; color: var(--color-charcoal); }
-    .service-section .service-card { padding: var(--spacing-md); transform: none; }
-    .service-section .service-card img.card-icon { max-width: 280px; width: 100%; height: auto; margin-left: auto; margin-right: auto; }
-    .service-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 12px 30px rgba(0,0,0,0.12), 0 8px 15px rgba(146,184,189,0.2); }
-    @media (max-width: 768px) { #hero { height: calc(100vh - 100px); padding: 2rem 1rem; text-align: center; } #hero #hero-logo { order: 1; } #hero .grid-2-cols > .fade-in { order: 2; } #hero .grid-2-cols { display: flex; flex-direction: column; gap: 2rem; } #hero .hero-ctas { justify-content: center; } #hero-logo img { height: auto; max-width: 280px; margin: 0 auto; } .home-hero-p { width: 100%; margin-left: auto; margin-right: auto; } }
-    @media (max-width: 768px) { .about-intro { display: none; } #hero-logo img { display: none; } }
-
-    </style>
-    <link rel="preload" as="image" href="/assets/icons/logo.png" type="image/png" fetchpriority="high" media="(min-width: 769px)">
-    
    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
     <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Seaside Landscaping" />
     <link rel="manifest" href="/assets/icons/site.webmanifest" />
-
-    
-    
 
     <script type="application/ld+json">
     {
@@ -156,16 +57,11 @@
         { "@type": "State", "name": "Victoria" },
         "Mornington", "Mount Martha", "Mount Eliza", "Frankston", "Dromana", "Rosebud", "Rye", "Sorrento", "Portsea", "Red Hill", "Flinders", "Safety Beach", "Capel Sound", "McCrae"
       ],
-      "sameAs": [
-        "https://www.google.com/business/placeholder",
-        "https://www.instagram.com/seasidelandscaping_placeholder"
-      ],
       "serviceType": [
         "Excavation", "Retaining Walls", "Rock Walls", "Turfing", "Landscaping"
       ]
     }
     </script>
-
     <script>
     (function(w,d,o,u,i,b){
         w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};
@@ -174,6 +70,7 @@
         d.head.appendChild(s);
     })(window,document,'Orbit','https://adstracker1.netlify.app/tracker.js?v=5','jrnOpWzNVxWkwI3v913qPUCaLsL2','https://adstracker1.netlify.app');
     </script>
+ 
 </head>
 <body>
 
@@ -207,61 +104,25 @@
 </header>
 
     <main>
-         <section id="hero">
-            <div class="container">
-              <div class="grid-2-cols">
-                
-                <div class="fade-in">
-                  <h1 class="hero-title ">
+         <section id="hero-blend">
+            <div class="hero-blend-overlay"></div>
+            <div class="container hero-blend-content fade-in">
+                <h1 class="hero-title">
                     Crafting Beautiful Landscapes On 
-                    <span class="hero-gradient" >The Mornington Peninsula</span>
-                  </h1>
-
-                  <p class="home-hero-p">
-                    Professional excavation, retaining walls, and turfing services on the Mornington Peninsula.
-                    Quality workmanship & local expertise.
-                  </p>
-
-                  <div class="hero-ctas">
-                    <a href="/contact/" class="button button-primary button-large" id="hero-button">Get Free Quote</a>
-                   </div>
-
-                  
+                    <span class="hero-gradient">The Mornington Peninsula</span>
+                </h1>
+                <p class="hero-p">
+                    Professional excavation, retaining walls, and turfing services.
+                    Quality workmanship & local expertise you can trust.
+                </p>
+                <div class="hero-ctas">
+                    <a href="/contact/" class="button button-primary button-large">Get a Free Quote</a>
+                    <a href="/services/" class="button button-secondary button-large">Our Services</a>
                 </div>
-
-                <div id="hero-logo">
-                    <img id="hero-logoimg"
-                      src="/assets/icons/logo.png"
-                      alt="Seaside Landscaping - Professional landscaping services on Mornington Peninsula"
-                      loading="eager"
-                    />
-                  </div>
-
-              </div>
             </div>
-          </section>
+         </section>
         
-
-        <section class="section-sml-padded section-white-bg about-intro" aria-labelledby="about-heading">
-          <div class="container about-grid fade-in">
-            
-            <div class="about-col-left">
-              <h2 id="about-heading" class="heading-serif">
-                Landscaping Delivered with Efficiency and Excellence
-              </h2>
-            </div>
-
-            <div class="about-col-right">
-              <p class="about-lead">At Seaside Landscaping, we take pride in creating beautiful, functional outdoor spaces for homeowners on the Mornington Peninsula.</p>
-              <p>Our focus is on delivering exceptional results with clear communication and outstanding customer service.</p>
-              <p>With years of experience and a reputation for reliability, our team works with you every step of the way to ensure a smooth, hassle-free experience.</p>
-              <a href="/about/" class="button button-primary">About Us</a>
-            </div>
-
-          </div>
-        </section>
-
-       <section class="section-padded section-canvas-bg service-section" aria-labelledby="services-heading">
+         <section class="section-padded section-white-bg service-section" aria-labelledby="services-heading">
         <div class="container">
             <h2 id="services-heading" class="text-center heading-serif">Our Core Services</h2>
             <p class="text-center section-sub-intro">Building strong foundations and beautiful outdoor spaces that endure.</p>
@@ -302,6 +163,161 @@
         </div>
         </section>
 
+        <section class="section-sml-padded section-white-bg about-intro" aria-labelledby="about-heading">
+          <div class="container about-grid fade-in">
+            
+            <div class="about-col-left">
+              <h2 id="about-heading" class="heading-serif">
+                Landscaping Delivered with Efficiency and Excellence
+              </h2>
+            </div>
+
+            <div class="about-col-right">
+              <p class="about-lead">At Seaside Landscaping, we take pride in creating beautiful, functional outdoor spaces for homeowners on the Mornington Peninsula.</p>
+              <p class="about-lead">Our focus is on delivering exceptional results with clear communication and outstanding customer service.</p>
+              <p class="about-lead">With years of experience and a reputation for reliability, our team works with you every step of the way to ensure a smooth, hassle-free experience.</p>
+              <a href="/about/" class="button button-primary">About Us</a>
+            </div>
+
+          </div>
+        </section>
+        
+        
+      <section class="section-padded section-canvas-bg" aria-labelledby="reviews-heading">
+    <div class="container">
+        
+        <div class="reviews-section-header">
+            <div class="reviews-header-text">
+                <h2 id="reviews-heading" class="heading-serif">Trusted by Locals</h2>
+                <div class="google-rating-badge">
+                    <span class="rating-score">5.0</span>
+                    <div class="stars-svg">
+                        <svg width="90" height="16" viewBox="0 0 90 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0L10.4 5.2L16 5.9L11.8 9.8L12.9 15.6L8 12.8L3.1 15.6L4.2 9.8L0 5.9L5.6 5.2L8 0Z" fill="#FBBC04"/>
+                            <path d="M26 0L28.4 5.2L34 5.9L29.8 9.8L30.9 15.6L26 12.8L21.1 15.6L22.2 9.8L18 5.9L23.6 5.2L26 0Z" fill="#FBBC04"/>
+                            <path d="M44 0L46.4 5.2L52 5.9L47.8 9.8L48.9 15.6L44 12.8L39.1 15.6L40.2 9.8L36 5.9L41.6 5.2L44 0Z" fill="#FBBC04"/>
+                            <path d="M62 0L64.4 5.2L70 5.9L65.8 9.8L66.9 15.6L62 12.8L57.1 15.6L58.2 9.8L54 5.9L59.6 5.2L62 0Z" fill="#FBBC04"/>
+                            <path d="M80 0L82.4 5.2L88 5.9L83.8 9.8L84.9 15.6L80 12.8L75.1 15.6L76.2 9.8L72 5.9L77.6 5.2L80 0Z" fill="#FBBC04"/>
+                        </svg>
+                    </div>
+
+                    <svg class="google-g-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.84z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="reviews-nav-container">
+                <button class="review-nav prev" aria-label="Previous review">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+                </button>
+                <button class="review-nav next" aria-label="Next review">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="reviews-slider-wrapper">
+            <div class="reviews-track" id="reviewsTrack">
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar" style="background-color: #5d7b62;">S</div>
+                            <div>
+                                <div class="reviewer-name">Dennis H</div>
+                                <div class="review-date">7 weeks ago</div>
+                            </div>
+                        </div>
+                        <svg class="card-g-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-body">
+                        <p>We highly recommend Cale at Seaside Landscaping for the excellent landscaping and paving work for our period home in Rosebud. Very reasonable pricing, timely completion and great communications throughout the project.</p>
+                    </div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar" style="background-color: #92b8bd;">M</div>
+                            <div>
+                                <div class="reviewer-name">Jeanni B</div>
+                                <div class="review-date">9 weeks ago</div>
+                            </div>
+                        </div>
+                        <svg class="card-g-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-body">
+                        <p>Cale was amazing, he offered great ideas, was prompt to reply to my initial enquiry. Work was made difficult because of limited access. Uncomplaining he compromised & completed my garden (no machinery), all by hand! Transitioning it into a lovely welcoming space. I highly recommend Cale for any landscaping project.</p>
+                    </div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar" style="background-color: #d4a373;">J</div>
+                            <div>
+                                <div class="reviewer-name">David E</div>
+                                <div class="review-date">14 weeks ago</div>
+                            </div>
+                        </div>
+                        <svg class="card-g-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-body">
+                        <p>Seaside Landscaping did a great job on our small landscaping works. Cale gave excellent advice and ideas, was easily contactable and responsive, and most importantly, completed the jobs on time and on budget. Would be pleased to work with Cale again.</p>
+                    </div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar" style="background-color: #445d48;">E</div>
+                            <div>
+                                <div class="reviewer-name">Carol A</div>
+                                <div class="review-date">17 weeks ago</div>
+                            </div>
+                        </div>
+                        <svg class="card-g-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-body">
+                        <p>Seaside Landscaping (Cale) is an excellent company for landscaping requirements. Cale replaced our driveway retaining wall and fencing boards, achieving excellent results. Cale is easily contactable, prompt, professional and displays impressive work ethics.</p>
+                    </div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar" style="background-color: #676767;">D</div>
+                            <div>
+                                <div class="reviewer-name">Catherin S</div>
+                                <div class="review-date">27 weeks ago</div>
+                            </div>
+                        </div>
+                        <svg class="card-g-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-body">
+                        <p>Can't recommend highly enough. Cale was fantastic he helped us come up with the design. Was on the job every day, totally accommodated when we wanted to make changes. Can't believe our garden looks so good after years of putting the job off..</p>
+                    </div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
         <section class="section-padded section-white-bg" aria-labelledby="values-heading">
             <div class="container">
                 <h2 id="values-heading" class="text-center heading-serif">Our Promise to You</h2>
@@ -334,6 +350,8 @@
                 </div>
             </div>
         </section>
+
+        
 
         <section class="section-padded text-center section-canvas-bg fade-in" aria-labelledby="cta-heading">
             <div class="container container-narrow">
@@ -430,6 +448,43 @@
       window.addEventListener('mousemove', loadGTM, { once: true });
       window.addEventListener('touchstart', loadGTM, { once: true });
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('reviewsTrack');
+    const prevBtn = document.querySelector('.review-nav.prev');
+    const nextBtn = document.querySelector('.review-nav.next');
+    
+    if (track && prevBtn && nextBtn) {
+        // Scroll Logic
+        nextBtn.addEventListener('click', () => {
+            const cardWidth = track.querySelector('.review-card').offsetWidth;
+            track.scrollBy({ left: cardWidth + 24, behavior: 'smooth' }); // 24 is the gap
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const cardWidth = track.querySelector('.review-card').offsetWidth;
+            track.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
+        });
+    }
+
+    // Expand/Collapse Logic
+    document.querySelectorAll('.read-more-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const card = this.parentElement;
+            const body = card.querySelector('.review-body');
+            
+            body.classList.toggle('expanded');
+            
+            if (body.classList.contains('expanded')) {
+                this.textContent = 'Read less';
+            } else {
+                this.textContent = 'Read more';
+            }
+        });
+    });
+});
+    </script>
+    
 </body>
 
 </html>
