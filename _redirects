@@ -1,10 +1,14 @@
-# Redirects for Seaside Landscaping
+# --- Domain Redirects ---
+# Netlify subdomain to real domain
+https://clinquant-narwhal-3382c8.netlify.app/* https://seasidelandscaping.com.au/:splat  301!
 
-# from previous site structure
+# 2. Redirect www to non-www 
+https://www.seasidelandscaping.com.au/* https://seasidelandscaping.com.au/:splat  301!
+
+
+# --- Old Site Structure Redirects ---
 /fencing-mornington/            /landscapes/                      301
 /decking/                       /landscapes/                      301
-
-# --- from first site ---
 /excavation/                    /excavation-mornington/           301
 /retaining-walls/               /retaining-walls-mornington/      301
 /turfing/                       /turfing-mornington/              301
