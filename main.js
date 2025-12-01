@@ -2,10 +2,13 @@
 // Handles partial loading, UI interactions, gallery, and contact form
 
 const startTime = Date.now();
-// --- Sticky Header Scroll Effect ---
-const header = document.querySelector('.site-header');
 
+// --- Sticky Header Scroll Effect ---
+// FIXED: Moved selector inside the listener to prevent crashing if header isn't found immediately
 window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    if (!header) return; // Safety check
+
     // Add .scrolled class if user scrolls more than 50px, otherwise remove it
     if (window.scrollY > 50) {
         header.classList.add('scrolled');
@@ -77,7 +80,12 @@ function initFooter() {
 }
 
 function observeSections() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // FIXED: If reduced motion is on, show everything immediately instead of returning early (which left opacity at 0)
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+    return;
+  }
+
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
