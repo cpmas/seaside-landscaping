@@ -642,3 +642,80 @@
     }
     
 }
+
+
+.section-sub-intro {
+    color: var(--color-charcoal);
+}
+
+
+.aboutsection {
+  padding: 4rem 0;
+}
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Typography */
+.heading-about {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.1;
+    color: var(--color-accent); /* Accent Color */
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    font-family: 'Montserrat', sans-serif;
+    color: #2b2b2b; /* Dark Charcoal */
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Image Styling */
+.rounded-img {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+/* Responsive: Stack columns on smaller screens */
+@media (max-width: 850px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* Optional: Ensure image order if needed */
+    .about-image-wrapper {
+        order: -1; /* Puts image above text on mobile if desired */
+    }
+
+    .rounded-img {
+      display: none;
+    }
+
+    .about-content p {
+      text-align: center;
+    }
+    .heading-serif {
+      text-align: center;
+    }
+    .about-content {
+      align-self: center;
+      text-align: center;
+    }
+}
+
+

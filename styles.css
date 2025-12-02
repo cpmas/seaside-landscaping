@@ -17,6 +17,7 @@
   --color-canvas:#fdf7ed;
   --color-bgw: #fcf7ed;
   --color-bgww: #fffcf7;
+  --color-white: #ffffff;
   --color-bluefade: rgb(146, 184, 189, 0.1);
   --color-bluehead: rgb(146, 184, 189, 0.08);
   --color-charcoal:#676767;
@@ -58,7 +59,7 @@ a:hover,a:focus{color:var(--color-primary);text-decoration:none;outline:none;}
 button{cursor:pointer;font-family:var(--font-sans);border:none;background:none;color:inherit;font-size:inherit;}
 
 h1,h2,h3,h4,h6{font-family: "Montserrat", sans-serif;;line-height:1.2;margin-bottom:var(--spacing-md);color:var(--color-accent);}
-.heading-serif{font-family:var(--font-serif);font-weight:600;}
+.heading-serif{font-family:var(--font-serif);font-weight:800;}
 h1{font-size:2.8rem;}h2{font-size:4rem;}h3{font-size:1.2rem;}h4{font-size:1.4rem;}h5{font-size:1.4rem; color: var(--color-charcoal);}
 p{margin-bottom:var(--spacing-sm);}
 
@@ -75,6 +76,7 @@ p{margin-bottom:var(--spacing-sm);}
 .section-accent-bg{background:var(--color-accent);border-top: 1px solid var(--color-light-stone); box-shadow: 0 2px 6px rgba(0,0,0,0.04);}
 .section-white-bg{background:var(--color-bgww);border-top: 1px solid var(--color-light-stone); box-shadow: 0 2px 6px rgba(0,0,0,0.04);}
 .section-bgw-bg{background:var(--color-bgww);}
+.section-white{background: var(--color-white);}
 .centered {text-align: center;}
 
 .grid-4-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--spacing-lg);}
@@ -125,7 +127,7 @@ p{margin-bottom:var(--spacing-sm);}
 }
 
 /* --- Cards & Services --- */
-.card{background:var(--color-canvas);border:1px solid var(--color-light-stone);border-radius:var(--radius-soft);padding:var(--spacing-lg);box-shadow:var(--shadow-soft);transition:box-shadow .3s,transform .3s;}
+.card{background:var(--color-white);border:1px solid var(--color-light-stone);border-radius:var(--radius-soft);padding:var(--spacing-lg);box-shadow:var(--shadow-soft);transition:box-shadow .3s,transform .3s;}
 .card:hover{box-shadow:var(--shadow-hover);transform:translateY(-4px);}
 
 .value-props .value-item{text-align:center;padding:var(--spacing-md);margin-top: 2rem;}
